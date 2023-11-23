@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { SwitchTransition, CSSTransition } from "react-transition-group";
 import "./Home.css";
+import ToggleSwitch from "./components/ToggleSwitch";
 
 export default function Home() {
   const [state, setState] = useState(true);
@@ -35,7 +36,7 @@ export default function Home() {
             >
               <div ref={nodeRef} className="flex justify-center">
                 {state ? (
-                  <div className="btn w-3/4 h-50 flex flex-col justify-center self-center mt-24 p-2 rounded-xl border-2 border-solid border-black">
+                  <div className="btn w-3/4 h-50 flex flex-col justify-center self-center mt-24 p-2 bg-white shadow-xl rounded-xl ">
                     <h1 className="text-xl text-center mb-2 font-semibold">
                       Where are we mixing things up?
                     </h1>
@@ -57,51 +58,51 @@ export default function Home() {
                     </div>
                   </div>
                 ) : (
-                  <div className="btn w-3/4 h-50 flex flex-col justify-center self-center mt-24 p-2 rounded-xl border-2 border-solid border-black">
+                  <div className="btn w-3/4 h-50 flex flex-col justify-center self-center mt-24 p-2 bg-white shadow-xl rounded-xl">
                     <h2 className="text-lg font-bold mb-4 text-center">
                       Liquor Preferences?
                     </h2>
 
                     <div className="modal-body grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="flex items-center">
-                        <input type="checkbox" id="gin" className="mr-2" />
-                        <label htmlFor="gin" className="text-md">
+                        <ToggleSwitch id={"gin"} />
+                        <label htmlFor="gin" className="text-md pl-4">
                           Gin
                         </label>
                       </div>
                       <div className="flex items-center">
-                        <input type="checkbox" id="rum" className="mr-2" />
-                        <label htmlFor="rum" className="text-md">
+                        <ToggleSwitch id={"rum"} />
+                        <label htmlFor="rum" className="text-md pl-4">
                           Rum
                         </label>
                       </div>
                       <div className="flex items-center">
-                        <input type="checkbox" id="tequila" className="mr-2" />
-                        <label htmlFor="tequila" className="text-md">
+                        <ToggleSwitch id={"tequila"} />
+                        <label htmlFor="tequila" className="text-md pl-4">
                           Tequila
                         </label>
                       </div>
                       <div className="flex items-center">
-                        <input type="checkbox" id="mezcal" className="mr-2" />
-                        <label htmlFor="mezcal" className="text-md">
+                        <ToggleSwitch id={"mezcal"} />
+                        <label htmlFor="mezcal" className="text-md pl-4">
                           Mezcal
                         </label>
                       </div>
                       <div className="flex items-center">
-                        <input type="checkbox" id="whiskey" className="mr-2" />
-                        <label htmlFor="whiskey" className="text-md">
+                        <ToggleSwitch id={"whiskey"} />
+                        <label htmlFor="whiskey" className="text-md pl-4">
                           American Whiskey
                         </label>
                       </div>
                       <div className="flex items-center">
-                        <input type="checkbox" id="whisky" className="mr-2" />
-                        <label htmlFor="whisky" className="text-md">
+                        <ToggleSwitch id={"scotch"} />
+                        <label htmlFor="scotch" className="text-md pl-4">
                           Scotch Whisky
                         </label>
                       </div>
                       <div className="flex items-center">
-                        <input type="checkbox" id="vodka" className="mr-2" />
-                        <label htmlFor="vodka" className="text-md">
+                        <ToggleSwitch id={"vodka"} />
+                        <label htmlFor="vodka" className="text-md pl-4">
                           Vodka
                         </label>
                       </div>
