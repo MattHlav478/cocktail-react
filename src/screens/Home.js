@@ -1,9 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
 import { SwitchTransition, CSSTransition } from "react-transition-group";
 import "./Home.css";
-import ToggleSwitch from "./components/ToggleSwitch";
+import LiquorPrefs from "./components/LiquorPrefs";
+import { citySearch } from "../services/citySearch";
 
 export default function Home() {
+  const [query, setQuery] = useState("");
+  const [searchResults, setSearchResults] = useState(null);
+
   const [state, setState] = useState(true);
   const helloRef = useRef(null);
   const goodbyeRef = useRef(null);
@@ -16,6 +20,39 @@ export default function Home() {
   useEffect(() => {
     console.log(state);
   }, [state]);
+
+  // const handleSearch = async (query) => {
+  //   setQuery(query);
+
+  //   try {
+  //     const citiesPromise = citySearch(query);
+  //     const cities = await Promise.all(citiesPromise);
+
+  //     if (Array.isArray(cities)) {
+  //       setSearchResults([...cities]);
+  //     } else {
+  //       console.log("Error: API call returned non-array data.");
+  //     }
+  //   } catch (error) {
+  //     console.log("Error fetching search results: ", error);
+  //   }
+  // };
+
+  useEffect(() => {
+    fetch(
+      `http://api.geonames.org/searchJSON?q=${query}&maxRows=10&username=matthewh478`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        const cities = data.geonames.map((geoname) => ({
+          city: geoname.name,
+          state: geoname.adminName1,
+          country: geoname.countryName,
+        }));
+        setSearchResults(cities);
+      });
+  }, [query]);
 
   return (
     <>
@@ -46,7 +83,16 @@ export default function Home() {
                         placeholder="City, State"
                         id="search-city"
                         className="border-2 p-2 mb-4 rounded-md w-full md:w-2/3 lg:w-1/2 mx-auto shadow-sm focus:outline-none focus:border-red-500"
+                        value={query}
+                        onChange={(e) => setQuery(e.target.value)}
                       />
+                      {searchResults && (
+                        <ul>
+                          {searchResults.map((result, index) => (
+                            <li>{result.city}, {result.state}, {result.country}</li>
+                          ))}
+                        </ul>
+                      )}{" "}
                     </div>
                     <div className="flex flex-row justify-center">
                       <button
@@ -58,64 +104,7 @@ export default function Home() {
                     </div>
                   </div>
                 ) : (
-                  <div className="btn w-3/4 h-50 flex flex-col justify-center self-center mt-24 p-2 bg-white shadow-xl rounded-xl">
-                    <h2 className="text-lg font-bold mb-4 text-center">
-                      Liquor Preferences?
-                    </h2>
-
-                    <div className="modal-body grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="flex items-center">
-                        <ToggleSwitch id={"gin"} />
-                        <label htmlFor="gin" className="text-md pl-4">
-                          Gin
-                        </label>
-                      </div>
-                      <div className="flex items-center">
-                        <ToggleSwitch id={"rum"} />
-                        <label htmlFor="rum" className="text-md pl-4">
-                          Rum
-                        </label>
-                      </div>
-                      <div className="flex items-center">
-                        <ToggleSwitch id={"tequila"} />
-                        <label htmlFor="tequila" className="text-md pl-4">
-                          Tequila
-                        </label>
-                      </div>
-                      <div className="flex items-center">
-                        <ToggleSwitch id={"mezcal"} />
-                        <label htmlFor="mezcal" className="text-md pl-4">
-                          Mezcal
-                        </label>
-                      </div>
-                      <div className="flex items-center">
-                        <ToggleSwitch id={"whiskey"} />
-                        <label htmlFor="whiskey" className="text-md pl-4">
-                          American Whiskey
-                        </label>
-                      </div>
-                      <div className="flex items-center">
-                        <ToggleSwitch id={"scotch"} />
-                        <label htmlFor="scotch" className="text-md pl-4">
-                          Scotch Whisky
-                        </label>
-                      </div>
-                      <div className="flex items-center">
-                        <ToggleSwitch id={"vodka"} />
-                        <label htmlFor="vodka" className="text-md pl-4">
-                          Vodka
-                        </label>
-                      </div>
-                      <div className="flex flex-row justify-center">
-                        <button
-                          className="bg-purple-100 p-4 w-1/2 rounded-xl border-2 border-black"
-                          onClick={() => setState((state) => !state)}
-                        >
-                          Next
-                        </button>
-                      </div>
-                    </div>
-                  </div>
+                  <LiquorPrefs state={state} setState={setState} />
                 )}
               </div>
             </CSSTransition>
