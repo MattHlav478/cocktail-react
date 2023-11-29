@@ -21,38 +21,24 @@ export default function Home() {
     console.log(state);
   }, [state]);
 
-  // const handleSearch = async (query) => {
-  //   setQuery(query);
+  const handleSearch = async (query) => {
+    setQuery(query);
 
-  //   try {
-  //     const citiesPromise = citySearch(query);
-  //     const cities = await Promise.all(citiesPromise);
+    if (query.length > 2) {
+      try {
+        const cities = await citySearch(query);
 
-  //     if (Array.isArray(cities)) {
-  //       setSearchResults([...cities]);
-  //     } else {
-  //       console.log("Error: API call returned non-array data.");
-  //     }
-  //   } catch (error) {
-  //     console.log("Error fetching search results: ", error);
-  //   }
-  // };
-
-  useEffect(() => {
-    fetch(
-      `http://api.geonames.org/searchJSON?q=${query}&maxRows=10&username=matthewh478`
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        const cities = data.geonames.map((geoname) => ({
-          city: geoname.name,
-          state: geoname.adminName1,
-          country: geoname.countryName,
-        }));
-        setSearchResults(cities);
-      });
-  }, [query]);
+        if (Array.isArray(cities)) {
+          setSearchResults([...cities]);
+        } else {
+          console.log("Error: API call returned non-array data.");
+        }
+        console.log(searchResults);
+      } catch (error) {
+        console.log("Error fetching search results: ", error);
+      }
+    }
+  };
 
   return (
     <>
@@ -84,12 +70,14 @@ export default function Home() {
                         id="search-city"
                         className="border-2 p-2 mb-4 rounded-md w-full md:w-2/3 lg:w-1/2 mx-auto shadow-sm focus:outline-none focus:border-red-500"
                         value={query}
-                        onChange={(e) => setQuery(e.target.value)}
+                        onChange={(e) => handleSearch(e.target.value)}
                       />
-                      {searchResults && (
+                      {searchResults && query.length > 0 && (
                         <ul>
                           {searchResults.map((result, index) => (
-                            <li>{result.city}, {result.state}, {result.country}</li>
+                            <li>
+                              {result.city}, {result.state}, {result.country}
+                            </li>
                           ))}
                         </ul>
                       )}{" "}
