@@ -7,6 +7,7 @@ import { citySearch } from "../services/citySearch";
 export default function Home() {
   const [query, setQuery] = useState("");
   const [searchResults, setSearchResults] = useState(null);
+  const [searchSelect, setSearchSelect] = useState(false);
 
   const [state, setState] = useState(true);
   const helloRef = useRef(null);
@@ -33,12 +34,17 @@ export default function Home() {
         } else {
           console.log("Error: API call returned non-array data.");
         }
-        console.log(searchResults);
       } catch (error) {
         console.log("Error fetching search results: ", error);
       }
     }
   };
+
+  const handleSearchSelection = (city, state) => {
+    console.log(city, state)
+    setQuery(`${city}, ${state}`)
+    setSearchSelect(true)
+  }
 
   return (
     <>
@@ -72,10 +78,13 @@ export default function Home() {
                         value={query}
                         onChange={(e) => handleSearch(e.target.value)}
                       />
-                      {searchResults && query.length > 0 && (
-                        <ul>
+                      {searchResults && !searchSelect && query.length > 0 && (
+                        <ul className="absolute bg-white border-2 border-solid">
                           {searchResults.map((result, index) => (
-                            <li>
+                            <li
+                              className="hover:bg-sky-200"
+                              onClick={() => handleSearchSelection(result.city, result.state)}
+                            >
                               {result.city}, {result.state}, {result.country}
                             </li>
                           ))}
