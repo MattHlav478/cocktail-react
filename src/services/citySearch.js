@@ -5,15 +5,18 @@ export const citySearch = async (query) => {
     );
     const data = await response.json();
     console.log(data);
-    const cities = await data.geonames.map((city) => {
-      if (city.fc1Name = "city, village,...") {
-        return {
-          city: city.name,
-          state: city.adminName1,
-          country: city.countryName,
-        };
-      } else return null;
-    });
+    const cities = await data.geonames
+      .map((city) => {
+        if ((city.fc1Name = "city, village,...")) {
+          return {
+            city: city.name,
+            state: city.adminName1,
+            country: city.countryName,
+            population: city.population,
+          };
+        } else return null;
+      })
+      .sort((a, b) => b.population - a.population);
     return cities;
   } catch (error) {
     console.group("Error fetching city data: ", error);

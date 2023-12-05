@@ -2,13 +2,9 @@ import React, { useState, useRef, useEffect } from "react";
 import { SwitchTransition, CSSTransition } from "react-transition-group";
 import "./Home.css";
 import LiquorPrefs from "./components/LiquorPrefs";
-import { citySearch } from "../services/citySearch";
+import CitySearch from "./components/subcomponents/CitySearch";
 
 export default function Home() {
-  const [query, setQuery] = useState("");
-  const [searchResults, setSearchResults] = useState(null);
-  const [searchSelect, setSearchSelect] = useState(false);
-
   const [state, setState] = useState(true);
   const helloRef = useRef(null);
   const goodbyeRef = useRef(null);
@@ -21,30 +17,6 @@ export default function Home() {
   useEffect(() => {
     console.log(state);
   }, [state]);
-
-  const handleSearch = async (query) => {
-    setQuery(query);
-
-    if (query.length > 2) {
-      try {
-        const cities = await citySearch(query);
-
-        if (Array.isArray(cities)) {
-          setSearchResults([...cities]);
-        } else {
-          console.log("Error: API call returned non-array data.");
-        }
-      } catch (error) {
-        console.log("Error fetching search results: ", error);
-      }
-    }
-  };
-
-  const handleSearchSelection = (city, state) => {
-    console.log(city, state)
-    setQuery(`${city}, ${state}`)
-    setSearchSelect(true)
-  }
 
   return (
     <>
@@ -65,41 +37,7 @@ export default function Home() {
             >
               <div ref={nodeRef} className="flex justify-center">
                 {state ? (
-                  <div className="btn w-3/4 h-50 flex flex-col justify-center self-center mt-24 p-2 bg-white shadow-xl rounded-xl ">
-                    <h1 className="text-xl text-center mb-2 font-semibold">
-                      Where are we mixing things up?
-                    </h1>
-                    <div className="text-center">
-                      <input
-                        type="text"
-                        placeholder="City, State"
-                        id="search-city"
-                        className="border-2 p-2 mb-4 rounded-md w-full md:w-2/3 lg:w-1/2 mx-auto shadow-sm focus:outline-none focus:border-red-500"
-                        value={query}
-                        onChange={(e) => handleSearch(e.target.value)}
-                      />
-                      {searchResults && !searchSelect && query.length > 0 && (
-                        <ul className="absolute bg-white border-2 border-solid">
-                          {searchResults.map((result, index) => (
-                            <li
-                              className="hover:bg-sky-200"
-                              onClick={() => handleSearchSelection(result.city, result.state)}
-                            >
-                              {result.city}, {result.state}, {result.country}
-                            </li>
-                          ))}
-                        </ul>
-                      )}{" "}
-                    </div>
-                    <div className="flex flex-row justify-center">
-                      <button
-                        className="bg-purple-100 p-4 w-1/2 rounded-xl border-2 border-black"
-                        onClick={() => setState((state) => !state)}
-                      >
-                        Next
-                      </button>
-                    </div>
-                  </div>
+                  <CitySearch setState={setState} />
                 ) : (
                   <LiquorPrefs state={state} setState={setState} />
                 )}
