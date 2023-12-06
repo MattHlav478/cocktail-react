@@ -5,18 +5,20 @@ import LiquorPrefs from "./components/LiquorPrefs";
 import CitySearch from "./components/subcomponents/CitySearch";
 
 export default function Home() {
-  const [state, setState] = useState(true);
+  const [modalState, setModalState] = useState(true);
   const helloRef = useRef(null);
   const goodbyeRef = useRef(null);
-  const nodeRef = state ? helloRef : goodbyeRef;
+  const nodeRef = modalState ? helloRef : goodbyeRef;
 
   useEffect(() => {
     console.log(nodeRef.current);
   }, [nodeRef]);
 
   useEffect(() => {
-    console.log(state);
-  }, [state]);
+    console.log(modalState);
+  }, [modalState]);
+
+
 
   return (
     <>
@@ -28,7 +30,7 @@ export default function Home() {
         <div className="absolute w-full h-3/4 flex flex-col">
           <SwitchTransition mode={"out-in"}>
             <CSSTransition
-              key={state} // Use the state to generate a unique key
+              key={modalState} // Use the state to generate a unique key
               nodeRef={nodeRef}
               addEndListener={(done) => {
                 nodeRef.current.addEventListener("transitionend", done, false);
@@ -36,10 +38,16 @@ export default function Home() {
               classNames="fade"
             >
               <div ref={nodeRef} className="flex justify-center">
-                {state ? (
-                  <CitySearch setState={setState} />
+                {modalState ? (
+                  <CitySearch
+                    modalState={modalState}
+                    setModalState={setModalState}
+                  />
                 ) : (
-                  <LiquorPrefs state={state} setState={setState} />
+                  <LiquorPrefs
+                    modalState={modalState}
+                    setModalState={setModalState}
+                  />
                 )}
               </div>
             </CSSTransition>

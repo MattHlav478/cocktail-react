@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { citySearch } from "../../../services/citySearch";
+import { getLatLon } from "../../../services/weatherSearch";
 
-export default function CitySearch({ setState }) {
+export default function CitySearch({ modalState, setModalState }) {
   const [query, setQuery] = useState("");
   const [searchResults, setSearchResults] = useState(null);
-  const [searchSelect, setSearchSelect] = useState(false);
+  const [citySelected, setCitySelected] = useState(false);
 
   const handleSearch = async (query) => {
     setQuery(query);
@@ -24,11 +25,13 @@ export default function CitySearch({ setState }) {
     }
   };
 
-  const handleSearchSelection = (city, state) => {
+  const handleCitySelection = (city, state, country) => {
     console.log(city, state);
     setQuery(`${city}, ${state}`);
-    setSearchSelect(true);
+    setCitySelected(true);
+    let cityCoordinates = getLatLong(city, state, country)
   };
+
   return (
     <div className="btn w-3/4 h-50 flex flex-col justify-center self-center mt-24 p-2 bg-white shadow-xl rounded-xl ">
       <h1 className="text-xl text-center mb-2 font-semibold">
@@ -48,13 +51,13 @@ export default function CitySearch({ setState }) {
             className="flex items-center justify-center w-7 h-7 text-center border-2"
             onClick={() => {
               setQuery("");
-              setSearchSelect(false);
+              setCitySelected(false);
             }}
           >
             x
           </button>
         </span>
-        {searchResults && !searchSelect && query.length > 0 && (
+        {searchResults && !citySelected && query.length > 0 && (
           <ul className="absolute flex flex-col bg-white border-2 border-solid">
             {searchResults
               .reduce((unique, result) => {
@@ -74,7 +77,7 @@ export default function CitySearch({ setState }) {
                 <li
                   className="text-left py-1 hover:bg-sky-200"
                   onClick={() =>
-                    handleSearchSelection(result.city, result.state)
+                    handleCitySelection(result.city, result.state, result.country)
                   }
                 >
                   <div>
@@ -89,7 +92,7 @@ export default function CitySearch({ setState }) {
       <div className="flex flex-row justify-center">
         <button
           className="bg-purple-100 p-4 w-1/2 rounded-xl border-2 border-black"
-          onClick={() => setState((state) => !state)}
+          onClick={() => setModalState((modalState) => !modalState)}
         >
           Next
         </button>
