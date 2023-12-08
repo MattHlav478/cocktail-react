@@ -1,6 +1,6 @@
 // searce h will run this function first to grab the locations lat and lon
 export const getLatLon = async ({ city, state, country }) => {
-  var geocodeApi = `https://api.openweathermap.org/geo/1.0/direct?q=${city},${state},${country}&appid=${apiKey}`;
+  var geocodeApi = `https://api.openweathermap.org/geo/1.0/direct?q=${city},${state},${country}&appid=${process.env.REACT_APP_OPENWEATHER_API}`;
 
   fetch(geocodeApi)
     .then(function (response) {
@@ -36,7 +36,7 @@ export function getWeather(
   locationLat,
   locationLon
 ) {
-  var weatherApiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${locationLat}&lon=${locationLon}&exclude={part}&appid=${apiKey}&units=imperial`;
+  var weatherApiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${locationLat}&lon=${locationLon}&exclude={part}&appid=${process.env.REACT_APP_OPENWEATHER_API}&units=imperial`;
   fetch(weatherApiUrl)
     .then(function (response) {
       if (!response.ok) {
@@ -55,7 +55,7 @@ export function getWeather(
       let currentWeather = data.current.weather[0].description;
       let weatherIcon = data.current.weather[0].icon;
 
-      weatherInfo = [currentTemp, currentWeather, weatherIcon];
+      let weatherInfo = [currentTemp, currentWeather, weatherIcon];
       console.log(`weatherInfo: ${weatherInfo}`)
       return weatherInfo;
     })

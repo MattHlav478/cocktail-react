@@ -29,7 +29,7 @@ export default function CitySearch({ modalState, setModalState }) {
     console.log(city, state);
     setQuery(`${city}, ${state}`);
     setCitySelected(true);
-    let cityCoordinates = getLatLong(city, state, country)
+    let cityCoordinates = getLatLon(city, state, country)
   };
 
   return (
