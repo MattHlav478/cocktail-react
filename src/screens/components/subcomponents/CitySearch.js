@@ -2,10 +2,15 @@ import React, { useState } from "react";
 import { citySearch } from "../../../services/citySearch";
 import { getLatLon } from "../../../services/weatherSearch";
 
-export default function CitySearch({ modalState, setModalState }) {
+export default function CitySearch({
+  citySelected,
+  setCitySelected,
+  setWeather,
+  modalState,
+  setModalState,
+}) {
   const [query, setQuery] = useState("");
   const [searchResults, setSearchResults] = useState(null);
-  const [citySelected, setCitySelected] = useState(false);
 
   const handleSearch = async (query) => {
     setQuery(query);
@@ -29,7 +34,7 @@ export default function CitySearch({ modalState, setModalState }) {
     console.log(city, state);
     setQuery(`${city}, ${state}`);
     setCitySelected(true);
-    let cityCoordinates = getLatLon(city, state, country)
+    setWeather(getLatLon(city, state, country));
   };
 
   return (
@@ -73,11 +78,16 @@ export default function CitySearch({ modalState, setModalState }) {
                 }
                 return unique;
               }, [])
-              .map((result, index) => (
+              .map((result, i) => (
                 <li
+                  key={i}
                   className="text-left py-1 hover:bg-sky-200"
                   onClick={() =>
-                    handleCitySelection(result.city, result.state, result.country)
+                    handleCitySelection(
+                      result.city,
+                      result.state,
+                      result.country
+                    )
                   }
                 >
                   <div>

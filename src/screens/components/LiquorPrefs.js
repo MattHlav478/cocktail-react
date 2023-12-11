@@ -4,9 +4,9 @@ import ToggleSwitch from "./subcomponents/ToggleSwitch";
 export default function LiquorPrefs({ modalState, setModalState }) {
   const [liquorPrefs, setLiquorPrefs] = useState([]);
 
-  useEffect(() => {
-    console.log(liquorPrefs)
-  }, [liquorPrefs])
+  // useEffect(() => {
+  //   console.log(liquorPrefs)
+  // }, [liquorPrefs])
 
   const handleToggle = (liquor) => {
     setLiquorPrefs((prevPrefs) => {

@@ -4,21 +4,19 @@ import "./Home.css";
 import LiquorPrefs from "./components/LiquorPrefs";
 import CitySearch from "./components/subcomponents/CitySearch";
 
-export default function Home() {
+export default function Home({citySelected, setCitySelected, setWeather}) {
   const [modalState, setModalState] = useState(true);
   const helloRef = useRef(null);
   const goodbyeRef = useRef(null);
   const nodeRef = modalState ? helloRef : goodbyeRef;
 
-  useEffect(() => {
-    console.log(nodeRef.current);
-  }, [nodeRef]);
+  // useEffect(() => {
+  //   console.log(nodeRef.current);
+  // }, [nodeRef]);
 
-  useEffect(() => {
-    console.log(modalState);
-  }, [modalState]);
-
-
+  // useEffect(() => {
+  //   console.log(modalState);
+  // }, [modalState]);
 
   return (
     <>
@@ -40,6 +38,9 @@ export default function Home() {
               <div ref={nodeRef} className="flex justify-center">
                 {modalState ? (
                   <CitySearch
+                    citySelected={citySelected}
+                    setCitySelected={setCitySelected}
+                    setWeather={setWeather}
                     modalState={modalState}
                     setModalState={setModalState}
                   />
