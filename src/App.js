@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   const [citySelected, setCitySelected] = useState(false);
   const [weather, setWeather] = useState("");
+  const [cocktail, setCocktail] = useState("");
 
   useEffect(() => console.log(weather), [weather]);
 
@@ -20,12 +21,13 @@ function App() {
                 citySelected={citySelected}
                 setCitySelected={setCitySelected}
                 setWeather={setWeather}
+                setCocktail={setCocktail}
               />
             }
           />
           <Route
             path="/recommendation"
-            element={<Recommendation weather={weather} />}
+            element={<Recommendation weather={weather} cocktail={cocktail} />}
           />
           <Route path="/recipe" element={<Recipe />} />
         </Routes>

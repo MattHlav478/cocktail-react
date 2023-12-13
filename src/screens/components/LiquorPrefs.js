@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import ToggleSwitch from "./subcomponents/ToggleSwitch";
+import { drinkFinder } from "../../services/cocktailSearch";
 
-export default function LiquorPrefs({ modalState, setModalState }) {
+export default function LiquorPrefs({ modalState, setModalState, setCocktail }) {
   const [liquorPrefs, setLiquorPrefs] = useState([]);
 
   // useEffect(() => {
@@ -16,6 +17,13 @@ export default function LiquorPrefs({ modalState, setModalState }) {
         return [...prevPrefs, liquor];
       }
     });
+  };
+
+  async function handleLiquorPrefs() {
+    let cocktailData = await drinkFinder(liquorPrefs);
+
+
+    window.location.href = "/recommendation";
   };
 
   return (
@@ -76,7 +84,7 @@ export default function LiquorPrefs({ modalState, setModalState }) {
         <div className="flex flex-row justify-center">
           <button
             className="bg-purple-100 p-4 w-1/2 rounded-xl border-2 border-black"
-            onClick={() => setModalState((modalState) => !modalState)}
+            onClick={() => handleLiquorPrefs()}
           >
             Next
           </button>

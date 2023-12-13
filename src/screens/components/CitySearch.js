@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { citySearch } from "../../../services/citySearch";
-import { getLatLon } from "../../../services/weatherSearch";
+import { citySearch } from "../../services/citySearch";
+import { getLatLon } from "../../services/weatherSearch";
 
 export default function CitySearch({
   citySelected,
@@ -30,11 +30,12 @@ export default function CitySearch({
     }
   };
 
-  const handleCitySelection = (city, state, country) => {
+  const handleCitySelection = async (city, state, country) => {
     console.log(city, state);
     setQuery(`${city}, ${state}`);
     setCitySelected(true);
-    setWeather(getLatLon(city, state, country));
+    const weatherData = await getLatLon(city, state, country)
+    setWeather(weatherData);
   };
 
   return (
@@ -49,7 +50,7 @@ export default function CitySearch({
             placeholder="City, State"
             id="search-city"
             value={query}
-            className="focus:outline-none"
+            className="focus:outline-none w-full mr-2"
             onChange={(e) => handleSearch(e.target.value)}
           />
           <button
@@ -63,7 +64,7 @@ export default function CitySearch({
           </button>
         </span>
         {searchResults && !citySelected && query.length > 0 && (
-          <ul className="absolute flex flex-col bg-white border-2 border-solid">
+          <ul className="absolute flex flex-col w-2/3 bg-white border-2 border-solid">
             {searchResults
               .reduce((unique, result) => {
                 if (
@@ -81,7 +82,7 @@ export default function CitySearch({
               .map((result, i) => (
                 <li
                   key={i}
-                  className="text-left py-1 hover:bg-sky-200"
+                  className="text-left py-1 hover:bg-sky-200 border"
                   onClick={() =>
                     handleCitySelection(
                       result.city,
@@ -93,7 +94,7 @@ export default function CitySearch({
                   <div>
                     {result.city}, {result.state}
                   </div>
-                  <div>{result.country}</div>
+                  <div className="text-gray-400">{result.country}</div>
                 </li>
               ))}
           </ul>

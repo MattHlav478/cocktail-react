@@ -2,13 +2,18 @@ import React, { useState, useRef, useEffect } from "react";
 import { SwitchTransition, CSSTransition } from "react-transition-group";
 import "./Home.css";
 import LiquorPrefs from "./components/LiquorPrefs";
-import CitySearch from "./components/subcomponents/CitySearch";
+import CitySearch from "./components/CitySearch";
 
-export default function Home({citySelected, setCitySelected, setWeather}) {
+export default function Home({
+  citySelected,
+  setCitySelected,
+  setWeather,
+  setCocktail,
+}) {
   const [modalState, setModalState] = useState(true);
-  const helloRef = useRef(null);
-  const goodbyeRef = useRef(null);
-  const nodeRef = modalState ? helloRef : goodbyeRef;
+  const cityRef = useRef(null);
+  const liquorRef = useRef(null);
+  const nodeRef = modalState ? cityRef : liquorRef;
 
   // useEffect(() => {
   //   console.log(nodeRef.current);
@@ -48,6 +53,7 @@ export default function Home({citySelected, setCitySelected, setWeather}) {
                   <LiquorPrefs
                     modalState={modalState}
                     setModalState={setModalState}
+                    setCocktail={setCocktail}
                   />
                 )}
               </div>
