@@ -3,14 +3,6 @@ import React from "react";
 export default function Recipe() {
   return (
     <div className="min-h-screen bg-purple-100 font-sans">
-      <header class="bg-purple-500 text-white py-4 shadow-md">
-        <h1 class="text-center text-2xl font-bold">
-          <a href="../index.html" class="hover:text-gray-300">
-            Daily Cocktaily
-          </a>
-        </h1>
-      </header>
-
       <main class="container mx-auto p-4 mt-8">
         <section class="recipe-display mb-6 bg-white p-6 rounded-md shadow-md">
           <h3 id="cocktail-name" class="text-xl font-bold mb-4">

@@ -3,15 +3,7 @@ import React from "react";
 export default function Recommendation() {
   return (
     <div className="min-h-screen bg-purple-100 font-sans">
-      <header className="bg-purple-500 text-white py-4 shadow-md">
-        <h1 className="text-center text-2xl font-bold">
-          <a href="../index.html" className="hover:text-gray-300">
-            Daily Cocktaily
-          </a>
-        </h1>
-      </header>
-
-      <main className="container mx-auto p-4 mt-8">
+      <main className="container mx-auto p-4">
         <section className="weather-display mb-6 bg-white p-6 rounded-md shadow-md">
           <div className="temp-display">
             <h2 className="text-xl font-bold mb-4">Current Weather Conditions!</h2>

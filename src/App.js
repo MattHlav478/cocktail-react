@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import { Home, Recipe, Recommendation } from "./screens";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./screens/components/Header";
 
 function App() {
   const [citySelected, setCitySelected] = useState(false);
@@ -12,6 +13,7 @@ function App() {
 
   return (
     <>
+      <Header />
       <Router>
         <Routes>
           <Route

@@ -26,10 +26,6 @@ export default function Home({
   return (
     <>
       <div className="min-h-screen bg-purple-100 font-sans">
-        <header className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white py-4 shadow-md">
-          <h1 className="text-center text-2xl font-bold">Daily Cocktaily</h1>
-        </header>
-
         <div className="absolute w-full h-3/4 flex flex-col">
           <SwitchTransition mode={"out-in"}>
             <CSSTransition
