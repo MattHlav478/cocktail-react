@@ -7,6 +7,7 @@ import CitySearch from "./components/CitySearch";
 export default function Home({
   citySelected,
   setCitySelected,
+  weather,
   setWeather,
   setCocktail,
 }) {
@@ -50,6 +51,7 @@ export default function Home({
                     modalState={modalState}
                     setModalState={setModalState}
                     setCocktail={setCocktail}
+                    weather={weather}
                   />
                 )}
               </div>

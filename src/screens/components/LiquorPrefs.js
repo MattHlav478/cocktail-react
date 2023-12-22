@@ -2,12 +2,18 @@ import React, { useEffect, useState } from "react";
 import ToggleSwitch from "./subcomponents/ToggleSwitch";
 import { drinkFinder } from "../../services/cocktailSearch";
 
-export default function LiquorPrefs({ modalState, setModalState, setCocktail }) {
+export default function LiquorPrefs({
+  modalState,
+  setModalState,
+  setCocktail,
+  weather,
+}) {
   const [liquorPrefs, setLiquorPrefs] = useState([]);
+  const [redirect, setRedirect] = useState(false);
 
   // useEffect(() => {
-  //   console.log(liquorPrefs)
-  // }, [liquorPrefs])
+  //   console.log(liquorPrefs);
+  // }, [liquorPrefs]);
 
   const handleToggle = (liquor) => {
     setLiquorPrefs((prevPrefs) => {
@@ -20,11 +26,22 @@ export default function LiquorPrefs({ modalState, setModalState, setCocktail }) 
   };
 
   async function handleLiquorPrefs() {
-    let cocktailData = await drinkFinder(liquorPrefs);
-
-
-    window.location.href = "/recommendation";
-  };
+    let cocktailData = await drinkFinder(liquorPrefs, weather);
+    console.log(cocktailData);
+    // setCocktail({
+    //   drinkName: cocktailData[0][0],
+    //   ingredients: cocktailData[0][1],
+    //   recipe: cocktailData[0][3],
+    //   imageUrl: cocktailData[1],
+    // });
+    setRedirect(true);
+  }
+  
+  useEffect(() => {
+    if (redirect) {
+      window.location.href = "/recommendation";
+    }
+  }, [redirect]);
 
   return (
     <div className="btn w-3/4 h-50 flex flex-col justify-center self-center mt-24 p-2 bg-white shadow-xl rounded-xl">

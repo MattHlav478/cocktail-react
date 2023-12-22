@@ -1,6 +1,10 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 
-export default function Recommendation() {
+export default function Recommendation({weather, cocktail}) {
+  useEffect(() => {
+    console.log(`cocktail: ${cocktail.drinkName}`);
+  }, [cocktail]);
+
   return (
     <div className="min-h-screen bg-purple-100 font-sans">
       <main className="container mx-auto p-4">
@@ -29,12 +33,12 @@ export default function Recommendation() {
         >
           <section className="flex flex-col items-center">
             <h3 className="text-xl font-bold mb-4" id="cocktail-name">
-              Cocktail Name Title
+              {cocktail.drinkName}
             </h3>
             <p className="mb-4">(click anywhere here!)</p>
             <img
               id="cocktail-image"
-              src="../assets/images/sample-cocktail.jpg"
+              src={cocktail.imageUrl}
               alt="Cocktail Photo"
               className="w-full rounded-md"
             />
