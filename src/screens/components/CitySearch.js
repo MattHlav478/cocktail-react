@@ -6,7 +6,6 @@ export default function CitySearch({
   citySelected,
   setCitySelected,
   setWeather,
-  modalState,
   setModalState,
 }) {
   const [query, setQuery] = useState("");
@@ -103,7 +102,7 @@ export default function CitySearch({
       <div className="flex flex-row justify-center">
         <button
           className="bg-purple-100 p-4 w-1/2 rounded-xl border-2 border-black"
-          onClick={() => setModalState((modalState) => !modalState)}
+          onClick={() => setModalState("liquorPrefs")}
         >
           Next
         </button>

@@ -1,0 +1,538 @@
+[
+    {
+        "cocktailName": "Margarita",
+        "recipeIngredients": ["2 oz Tequila", "1 oz Lime juice", "1 oz Orange liqueur", "Salt for rim", "Lime wedge for garnish"],
+        "recipeInstructions": "Rub the rim of the glass with the lime slice to make the salt stick to it. Take a shaker, fill it with ice, tequila, lime juice, and orange liqueur. Shake well and strain into the glass. Garnish with a lime wedge.",
+        "minTemp": "70°F",
+        "maxTemp": "95°F",
+        "image": "margarita.png"
+    },
+    {
+        "cocktailName": "Mojito",
+        "recipeIngredients": ["10 fresh Mint leaves", "1/2 Lime, cut into 4 wedges", "2 tbsp Sugar", "1 1/2 oz White rum", "1/2 cup Club soda", "Ice cubes"],
+        "recipeInstructions": "Muddle mint leaves and 1 lime wedge in a sturdy glass. Add 2 more lime wedges and sugar, then muddle again. Fill the glass with ice. Pour the rum over and fill the glass with club soda. Stir and garnish with the remaining lime wedge.",
+        "minTemp": "75°F",
+        "maxTemp": "100°F",
+        "image": "mojito.png"
+    },
+    {
+        "cocktailName": "Old Fashioned",
+        "recipeIngredients": ["1 1/2 oz Bourbon or Rye whiskey", "2 dashes Angostura bitters", "1 Sugar cube", "Few dashes plain water", "Orange twist for garnish"],
+        "recipeInstructions": "Place the sugar cube in an Old Fashioned glass. Wet it down with bitters and a short splash of water. Crush the sugar with a wooden muddler. Rotate the glass so that the sugar grains and bitters give it a lining. Add a large ice cube and pour in the whiskey. Garnish with an orange twist.",
+        "minTemp": "50°F",
+        "maxTemp": "75°F",
+        "image": "old_fashioned.png"
+    },
+    {
+        "cocktailName": "Martini",
+        "recipeIngredients": ["2 1/2 oz Gin or Vodka", "1/2 oz Dry vermouth", "1 or 3 Olives or a Lemon twist for garnish", "Ice"],
+        "recipeInstructions": "Fill a mixing glass with ice cubes. Add gin or vodka and vermouth. Stir for 30 seconds and then strain into a chilled martini glass. Garnish with olives or a lemon twist.",
+        "minTemp": "45°F",
+        "maxTemp": "70°F",
+        "image": "martini.png"
+    },
+    {
+        "cocktailName": "Pina Colada",
+        "recipeIngredients": ["2 oz Light rum", "1 1/2 oz Cream of coconut", "1 1/2 oz Pineapple juice", "1/2 oz Fresh lime juice", "Pineapple wedge for garnish", "Maraschino cherry for garnish"],
+        "recipeInstructions": "Add rum, cream of coconut, pineapple juice, and lime juice into a shaker with ice, and shake until well-chilled. Strain into a chilled Hurricane glass over pebble ice. Garnish with a pineapple wedge and a maraschino cherry.",
+        "minTemp": "80°F",
+        "maxTemp": "100°F",
+        "image": "pina_colada.png"
+    },
+    {
+        "cocktailName": "Cosmopolitan",
+        "recipeIngredients": ["1 1/2 oz Citrus vodka", "1 oz Cranberry juice", "1/2 oz Cointreau", "1/2 oz Fresh lime juice", "Orange twist for garnish"],
+        "recipeInstructions": "Add all ingredients into a shaker with ice and shake until well-chilled. Strain into a chilled cocktail glass. Garnish with an orange twist.",
+        "minTemp": "60°F",
+        "maxTemp": "85°F",
+        "image": "cosmopolitan.png"
+    },
+    {
+        "cocktailName": "Negroni",
+        "recipeIngredients": ["1 oz Gin", "1 oz Campari", "1 oz Sweet vermouth", "Orange peel for garnish"],
+        "recipeInstructions": "Add all ingredients into a mixing glass with ice and stir until well-chilled. Strain into a rocks glass filled with large ice cubes. Garnish with an orange peel.",
+        "minTemp": "55°F",
+        "maxTemp": "75°F",
+        "image": "negroni.png"
+    },
+    {
+        "cocktailName": "Manhattan",
+        "recipeIngredients": ["2 oz Rye or Bourbon", "1/2 oz Sweet vermouth", "2 dashes Angostura bitters", "1 dash Orange bitters (optional)", "Cherry for garnish"],
+        "recipeInstructions": "Add all ingredients into a mixing glass with ice and stir well. Strain into a chilled cocktail glass. Garnish with a cherry.",
+        "minTemp": "50°F",
+        "maxTemp": "70°F",
+        "image": "manhattan.png"
+    },
+    {
+        "cocktailName": "Daiquiri",
+        "recipeIngredients": ["2 oz White rum", "1 oz Fresh lime juice", "3/4 oz Simple syrup"],
+        "recipeInstructions": "Add rum, lime juice, and simple syrup to a shaker with ice. Shake well and strain into a chilled coupe glass.",
+        "minTemp": "75°F",
+        "maxTemp": "95°F",
+        "image": "daiquiri.png"
+    },
+    {
+        "cocktailName": "Mai Tai",
+        "recipeIngredients": ["1 1/2 oz White rum", "1/2 oz Fresh lime juice", "1/2 oz Orange curaçao", "1/2 oz Orgeat syrup", "3/4 oz Dark rum", "Mint sprig for garnish", "Lime wheel for garnish"],
+        "recipeInstructions": "Add white rum, lime juice, orange curaçao, and orgeat into a shaker with ice and shake well. Pour into a glass filled with crushed ice. Float the dark rum on top. Garnish with a mint sprig and lime wheel.",
+        "minTemp": "70°F",
+        "maxTemp": "90°F",
+        "image": "mai_tai.png"
+    },
+    {
+        "cocktailName": "Bloody Mary",
+        "recipeIngredients": ["1 1/2 oz Vodka", "3 oz Tomato juice", "1/2 oz Lemon juice", "1 dash of Worcestershire sauce", "Celery salt", "Ground pepper", "Hot sauce", "Celery stalk and lime wedge for garnish"],
+        "recipeInstructions": "In a shaker, combine the vodka, tomato juice, lemon juice, Worcestershire sauce, celery salt, pepper, and hot sauce. Fill with ice and shake gently. Strain into an ice-filled glass. Garnish with a celery stalk and a lime wedge.",
+        "minTemp": "45°F",
+        "maxTemp": "75°F",
+        "image": "bloody_mary.png"
+    },
+    {
+        "cocktailName": "Gin Fizz",
+        "recipeIngredients": ["2 oz Gin", "1 oz Fresh lemon juice", "3/4 oz Simple syrup", "Club soda", "Lemon slice for garnish", "Cherry for garnish"],
+        "recipeInstructions": "Shake gin, lemon juice, and simple syrup with ice. Strain into a glass filled with ice and top with club soda. Garnish with a lemon slice and a cherry.",
+        "minTemp": "60°F",
+        "maxTemp": "85°F",
+        "image": "gin_fizz.png"
+    },
+    {
+        "cocktailName": "Sidecar",
+        "recipeIngredients": ["2 oz Cognac", "3/4 oz Lemon juice", "3/4 oz Triple sec", "Orange twist for garnish"],
+        "recipeInstructions": "Shake cognac, lemon juice, and triple sec with ice. Strain into a chilled cocktail glass. Garnish with an orange twist.",
+        "minTemp": "50°F",
+        "maxTemp": "70°F",
+        "image": "sidecar.png"
+    },
+    {
+        "cocktailName": "French 75",
+        "recipeIngredients": ["1 1/2 oz Gin", "3/4 oz Fresh lemon juice", "1/2 oz Simple syrup", "2 oz Champagne", "Lemon twist for garnish"],
+        "recipeInstructions": "Shake gin, lemon juice, and simple syrup with ice. Strain into a champagne flute. Top with champagne and garnish with a lemon twist.",
+        "minTemp": "45°F",
+        "maxTemp": "70°F",
+        "image": "french_75.png"
+    },
+    {
+        "cocktailName": "Whiskey Sour",
+        "recipeIngredients": ["2 oz Whiskey", "3/4 oz Lemon juice", "1/2 oz Simple syrup", "Cherry and lemon wedge for garnish"],
+        "recipeInstructions": "Shake whiskey, lemon juice, and simple syrup with ice. Strain into an ice-filled old-fashioned glass. Garnish with a cherry and a lemon wedge.",
+        "minTemp": "50°F",
+        "maxTemp": "75°F",
+        "image": "whiskey_sour.png"
+    },
+    {
+        "cocktailName": "Caipirinha",
+        "recipeIngredients": ["2 oz Cachaça", "1/2 Lime, cut into 4 wedges", "2 tsp Sugar"],
+        "recipeInstructions": "Muddle the lime and sugar in a glass. Fill the glass with ice and add the Cachaça. Stir well.",
+        "minTemp": "75°F",
+        "maxTemp": "100°F",
+        "image": "caipirinha.png"
+    },
+    {
+        "cocktailName": "Moscow Mule",
+        "recipeIngredients": ["2 oz Vodka", "6 oz Ginger beer", "1/2 oz Lime juice", "Lime slice for garnish", "Mint sprig for garnish"],
+        "recipeInstructions": "Fill a Moscow Mule mug with ice. Pour in vodka and lime juice. Add ginger beer. Stir gently and garnish with a lime slice and a sprig of mint.",
+        "minTemp": "60°F",
+        "maxTemp": "85°F",
+        "image": "moscow_mule.png"
+    },
+    {
+        "cocktailName": "Aperol Spritz",
+        "recipeIngredients": ["3 oz Prosecco", "2 oz Aperol", "1 oz Soda water", "Orange slice for garnish"],
+        "recipeInstructions": "Fill a wine glass with ice. Add Prosecco, Aperol, and soda water. Stir gently and garnish with an orange slice.",
+        "minTemp": "65°F",
+        "maxTemp": "85°F",
+        "image": "aperol_spritz.png"
+    },
+    {
+        "cocktailName": "Tom Collins",
+        "recipeIngredients": ["2 oz Gin", "1 oz Lemon juice", "1/2 oz Simple syrup", "Club soda", "Lemon slice for garnish", "Maraschino cherry for garnish"],
+        "recipeInstructions": "Shake gin, lemon juice, and simple syrup with ice. Strain into an ice-filled collins glass. Top with club soda. Garnish with a lemon slice and a cherry.",
+        "minTemp": "60°F",
+        "maxTemp": "85°F",
+        "image": "tom_collins.png"
+    },
+    {
+        "cocktailName": "Long Island Iced Tea",
+        "recipeIngredients": ["1/2 oz Vodka", "1/2 oz Tequila", "1/2 oz White rum", "1/2 oz Triple sec", "1/2 oz Gin", "1 oz Lemon juice", "1/2 oz Simple syrup", "Cola", "Lemon wedge for garnish"],
+        "recipeInstructions": "Add vodka, tequila, rum, triple sec, gin, lemon juice, and simple syrup to a shaker with ice. Shake well and strain into an ice-filled highball glass. Top with a splash of cola. Garnish with a lemon wedge.",
+        "minTemp": "70°F",
+        "maxTemp": "90°F",
+        "image": "long_island_iced_tea.png"
+    },
+    {
+        "cocktailName": "Espresso Martini",
+        "recipeIngredients": ["2 oz Vodka", "1/2 oz Coffee liqueur", "1 oz Fresh espresso", "1/2 oz Simple syrup"],
+        "recipeInstructions": "Fill a shaker with ice, vodka, coffee liqueur, fresh espresso, and simple syrup. Shake well until chilled. Strain into a chilled martini glass.",
+        "minTemp": "50°F",
+        "maxTemp": "70°F",
+        "image": "espresso_martini.png"
+    },
+    {
+        "cocktailName": "Mint Julep",
+        "recipeIngredients": ["2 oz Bourbon", "8-10 Mint leaves", "1/4 oz Simple syrup", "Mint sprig for garnish"],
+        "recipeInstructions": "Muddle mint leaves and simple syrup in a julep cup. Add bourbon and fill the cup with crushed ice. Stir until the cup is frosted on the outside. Top with more crushed ice and garnish with a mint sprig.",
+        "minTemp": "70°F",
+        "maxTemp": "90°F",
+        "image": "mint_julep.png"
+    },
+    {
+        "cocktailName": "Sangria",
+        "recipeIngredients": ["1 bottle of Red wine", "1/4 cup Brandy", "1/4 cup Orange juice", "2 tbsp Sugar", "Orange slices", "Lemon slices", "Lime slices", "Apple slices", "2 cups Soda water"],
+        "recipeInstructions": "In a large pitcher, combine red wine, brandy, orange juice, and sugar. Stir until sugar is dissolved. Add orange, lemon, lime, and apple slices. Refrigerate for at least 2 hours. Before serving, add soda water.",
+        "minTemp": "60°F",
+        "maxTemp": "85°F",
+        "image": "sangria.png"
+    },
+    {
+        "cocktailName": "Dark 'n' Stormy",
+        "recipeIngredients": ["2 oz Dark rum", "3 oz Ginger beer", "1/2 oz Lime juice", "Lime wedge for garnish"],
+        "recipeInstructions": "Fill a highball glass with ice. Add dark rum and lime juice. Top with ginger beer. Stir gently and garnish with a lime wedge.",
+        "minTemp": "65°F",
+        "maxTemp": "85°F",
+        "image": "dark_n_stormy.png"
+    },
+    {
+        "cocktailName": "Paloma",
+        "recipeIngredients": ["2 oz Tequila", "1/2 oz Lime juice", "Grapefruit soda", "Salt for rim", "Lime wedge for garnish"],
+        "recipeInstructions": "Salt the rim of a highball glass. Fill the glass with ice, add tequila and lime juice. Top with grapefruit soda. Stir gently and garnish with a lime wedge.",
+        "minTemp": "75°F",
+        "maxTemp": "95°F",
+        "image": "paloma.png"
+    },
+    {
+        "cocktailName": "Amaretto Sour",
+        "recipeIngredients": ["1 1/2 oz Amaretto", "3/4 oz Lemon juice", "1/2 oz Simple syrup", "Orange slice for garnish", "Cherry for garnish"],
+        "recipeInstructions": "Shake amaretto, lemon juice, and simple syrup with ice. Strain into an ice-filled rocks glass. Garnish with an orange slice and a cherry.",
+        "minTemp": "50°F",
+        "maxTemp": "75°F",
+        "image": "amaretto_sour.png"
+    },
+    {
+        "cocktailName": "Sazerac",
+        "recipeIngredients": ["2 oz Rye whiskey", "1 Sugar cube", "2 dashes Peychaud's bitters", "Absinthe", "Lemon peel for garnish"],
+        "recipeInstructions": "Chill an old-fashioned glass by filling it with ice. In a separate glass, muddle the sugar cube and bitters. Add rye whiskey and ice, and stir well. Discard the ice from the chilled glass and coat the glass with absinthe. Strain the whiskey mixture into the glass. Garnish with a lemon peel.",
+        "minTemp": "50°F",
+        "maxTemp": "70°F",
+        "image": "sazerac.png"
+    },
+    {
+        "cocktailName": "Penicillin",
+        "recipeIngredients": ["2 oz Blended Scotch whisky", "3/4 oz Lemon juice", "3/4 oz Honey-ginger syrup", "1/4 oz Islay single malt Scotch", "Candied ginger for garnish"],
+        "recipeInstructions": "Shake blended Scotch whisky, lemon juice, and honey-ginger syrup with ice. Strain into a rocks glass filled with ice. Float the Islay Scotch on top. Garnish with candied ginger.",
+        "minTemp": "40°F",
+        "maxTemp": "60°F",
+        "image": "penicillin.png"
+    },
+    {
+        "cocktailName": "Bramble",
+        "recipeIngredients": ["1 1/2 oz Gin", "1/2 oz Lemon juice", "1/2 oz Simple syrup", "1/2 oz Blackberry liqueur", "Fresh blackberries for garnish", "Lemon slice for garnish"],
+        "recipeInstructions": "Shake gin, lemon juice, and simple syrup with ice. Strain into an ice-filled rocks glass. Drizzle blackberry liqueur over the top. Garnish with fresh blackberries and a lemon slice.",
+        "minTemp": "60°F",
+        "maxTemp": "80°F",
+        "image": "bramble.png"
+    },
+    {
+        "cocktailName": "Aviation",
+        "recipeIngredients": ["2 oz Gin", "1/2 oz Maraschino liqueur", "1/4 oz Crème de violette", "3/4 oz Lemon juice", "Cherry for garnish"],
+        "recipeInstructions": "Shake gin, maraschino liqueur, crème de violette, and lemon juice with ice. Strain into a chilled cocktail glass. Garnish with a cherry.",
+        "minTemp": "50°F",
+        "maxTemp": "70°F",
+        "image": "aviation.png"
+    },
+    {
+        "cocktailName": "Harvey Wallbanger",
+        "recipeIngredients": ["1 1/2 oz Vodka", "4 oz Orange juice", "1/2 oz Galliano", "Orange slice for garnish", "Maraschino cherry for garnish"],
+        "recipeInstructions": "Pour vodka and orange juice into a glass with ice. Stir well. Float Galliano on top. Garnish with an orange slice and a maraschino cherry.",
+        "minTemp": "65°F",
+        "maxTemp": "85°F",
+        "image": "harvey_wallbanger.png"
+    },
+    {
+        "cocktailName": "Rusty Nail",
+        "recipeIngredients": ["1 1/2 oz Scotch whisky", "3/4 oz Drambuie", "Lemon peel for garnish"],
+        "recipeInstructions": "Pour Scotch whisky and Drambuie into an old-fashioned glass filled with ice. Stir gently. Garnish with a lemon peel.",
+        "minTemp": "45°F",
+        "maxTemp": "65°F",
+        "image": "rusty_nail.png"
+    },
+    {
+        "cocktailName": "White Russian",
+        "recipeIngredients": ["2 oz Vodka", "1 oz Coffee liqueur", "1 oz Heavy cream"],
+        "recipeInstructions": "Pour vodka and coffee liqueur into an old-fashioned glass filled with ice. Top with heavy cream and stir gently.",
+        "minTemp": "50°F",
+        "maxTemp": "70°F",
+        "image": "white_russian.png"
+    },
+    {
+        "cocktailName": "Black Russian",
+        "recipeIngredients": ["2 oz Vodka", "1 oz Coffee liqueur"],
+        "recipeInstructions": "Pour vodka and coffee liqueur into an old-fashioned glass filled with ice. Stir gently.",
+        "minTemp": "50°F",
+        "maxTemp": "70°F",
+        "image": "black_russian.png"
+    },
+    {
+        "cocktailName": "Tequila Sunrise",
+        "recipeIngredients": ["2 oz Tequila", "4 oz Orange juice", "1/2 oz Grenadine syrup", "Orange slice for garnish", "Cherry for garnish"],
+        "recipeInstructions": "Pour tequila and orange juice into a highball glass filled with ice. Stir well. Slowly pour grenadine around the inside edge of the glass. It will sink and slowly rise to mix with the other ingredients. Garnish with an orange slice and a cherry.",
+        "minTemp": "70°F",
+        "maxTemp": "90°F",
+        "image": "tequila_sunrise.png"
+    },
+    {
+        "cocktailName": "Sex on the Beach",
+        "recipeIngredients": ["1 1/2 oz Vodka", "1/2 oz Peach schnapps", "2 oz Cranberry juice", "2 oz Orange juice", "Orange slice for garnish"],
+        "recipeInstructions": "Pour vodka, peach schnapps, cranberry juice, and orange juice into a shaker with ice. Shake well. Strain into a highball glass filled with ice. Garnish with an orange slice.",
+        "minTemp": "75°F",
+        "maxTemp": "95°F",
+        "image": "sex_on_the_beach.png"
+    },
+    {
+        "cocktailName": "Blue Lagoon",
+        "recipeIngredients": ["1 1/2 oz Vodka", "1 oz Blue Curaçao", "Lemonade", "Cherry for garnish", "Lemon slice for garnish"],
+        "recipeInstructions": "Pour vodka and blue curaçao into a highball glass filled with ice. Top with lemonade. Stir gently. Garnish with a cherry and a lemon slice.",
+        "minTemp": "70°F",
+        "maxTemp": "90°F",
+        "image": "blue_lagoon.png"
+    },
+    {
+        "cocktailName": "Mudslide",
+        "recipeIngredients": ["1 oz Vodka", "1 oz Coffee liqueur", "1 oz Irish cream liqueur", "Chocolate syrup", "Whipped cream for garnish"],
+        "recipeInstructions": "Drizzle chocolate syrup around the inside of a glass. Add vodka, coffee liqueur, and Irish cream liqueur to a shaker with ice. Shake well. Strain into the prepared glass. Top with whipped cream.",
+        "minTemp": "50°F",
+        "maxTemp": "70°F",
+        "image": "mudslide.png"
+    },
+    {
+        "cocktailName": "Kamikaze",
+        "recipeIngredients": ["1 oz Vodka", "1 oz Triple sec", "1 oz Lime juice"],
+        "recipeInstructions": "Pour vodka, triple sec, and lime juice into a shaker with ice. Shake well. Strain into a shot glass or an old-fashioned glass filled with ice.",
+        "minTemp": "50°F",
+        "maxTemp": "75°F",
+        "image": "kamikaze.png"
+    },
+    {
+        "cocktailName": "Zombie",
+        "recipeIngredients": ["1 oz Light rum", "1 oz Dark rum", "1 oz Apricot brandy", "1 oz Lime juice", "2 oz Pineapple juice", "1/2 oz Grenadine", "Mint for garnish"],
+        "recipeInstructions": "Pour light rum, dark rum, apricot brandy, lime juice, pineapple juice, and grenadine into a shaker with ice. Shake well. Strain into a highball glass filled with ice. Garnish with mint.",
+        "minTemp": "75°F",
+        "maxTemp": "95°F",
+        "image": "zombie.png"
+    },
+    {
+        "cocktailName": "Singapore Sling",
+        "recipeIngredients": ["1 1/2 oz Gin", "1/2 oz Cherry liqueur", "1/4 oz Cointreau", "1/4 oz Benedictine", "4 oz Pineapple juice", "1/2 oz Lime juice", "1/3 oz Grenadine", "1 dash Angostura bitters", "Club soda", "Cherry for garnish", "Pineapple slice for garnish"],
+        "recipeInstructions": "Combine gin, cherry liqueur, Cointreau, Benedictine, pineapple juice, lime juice, grenadine, and bitters in a shaker with ice. Shake well. Strain into an ice-filled Collins glass. Top with club soda. Garnish with a cherry and a slice of pineapple.",
+        "minTemp": "70°F",
+        "maxTemp": "90°F",
+        "image": ""
+    },
+    {
+        "cocktailName": "Kir Royale",
+        "recipeIngredients": ["1/2 oz Crème de Cassis", "5 oz Champagne", "Lemon twist for garnish"],
+        "recipeInstructions": "Pour Crème de Cassis into a champagne flute. Gently pour champagne over it. Garnish with a lemon twist.",
+        "minTemp": "45°F",
+        "maxTemp": "65°F",
+        "image": ""
+    },
+    {
+        "cocktailName": "Godfather",
+        "recipeIngredients": ["1 1/2 oz Scotch whisky", "3/4 oz Amaretto"],
+        "recipeInstructions": "Pour Scotch whisky and amaretto into an old-fashioned glass filled with ice. Stir gently.",
+        "minTemp": "50°F",
+        "maxTemp": "70°F",
+        "image": ""
+    },
+    {
+        "cocktailName": "Sea Breeze",
+        "recipeIngredients": ["1 1/2 oz Vodka", "3 oz Cranberry juice", "1 1/2 oz Grapefruit juice", "Lime wedge for garnish"],
+        "recipeInstructions": "Pour vodka, cranberry juice, and grapefruit juice into a highball glass filled with ice. Stir well. Garnish with a lime wedge.",
+        "minTemp": "70°F",
+        "maxTemp": "90°F",
+        "image": ""
+    },
+    {
+        "cocktailName": "Pisco Sour",
+        "recipeIngredients": ["2 oz Pisco", "1 oz Lime juice", "1/2 oz Simple syrup", "1 Egg white", "Angostura bitters"],
+        "recipeInstructions": "Combine Pisco, lime juice, simple syrup, and egg white in a shaker. Shake vigorously without ice. Add ice and shake again. Strain into a coupe glass. Garnish with a few drops of Angostura bitters.",
+        "minTemp": "60°F",
+        "maxTemp": "80°F",
+        "image": ""
+    },
+    {
+        "cocktailName": "Hemingway Daiquiri",
+        "recipeIngredients": ["2 oz White rum", "3/4 oz Fresh grapefruit juice", "1/2 oz Maraschino liqueur", "1/2 oz Lime juice"],
+        "recipeInstructions": "Shake rum, grapefruit juice, maraschino liqueur, and lime juice with ice. Strain into a chilled cocktail glass.",
+        "minTemp": "70°F",
+        "maxTemp": "90°F",
+        "image": ""
+    },
+    {
+        "cocktailName": "French Martini",
+        "recipeIngredients": ["1 1/2 oz Vodka", "1/2 oz Chambord", "2 oz Pineapple juice", "Raspberry or lemon twist for garnish"],
+        "recipeInstructions": "Shake vodka, Chambord, and pineapple juice with ice. Strain into a chilled cocktail glass. Garnish with a raspberry or a lemon twist.",
+        "minTemp": "50°F",
+        "maxTemp": "70°F",
+        "image": ""
+    },
+    {
+        "cocktailName": "Grasshopper",
+        "recipeIngredients": ["3/4 oz Green crème de menthe", "3/4 oz White crème de cacao", "3/4 oz Cream"],
+        "recipeInstructions": "Shake green crème de menthe, white crème de cacao, and cream with ice. Strain into a chilled cocktail glass.",
+        "minTemp": "40°F",
+        "maxTemp": "60°F",
+        "image": ""
+    },
+    {
+        "cocktailName": "Red Snapper",
+        "recipeIngredients": ["1 1/2 oz Gin", "4 oz Tomato juice", "1/2 oz Lemon juice", "2 dashes Tabasco sauce", "2 dashes Worcestershire sauce", "1 pinch Celery salt", "1 pinch Ground pepper", "1 pinch Smoked paprika", "Lemon wedge for garnish", "Celery stalk for garnish"],
+        "recipeInstructions": "In a shaker, combine gin, tomato juice, lemon juice, Tabasco, Worcestershire sauce, celery salt, pepper, and smoked paprika. Fill with ice and shake gently. Strain into an ice-filled glass. Garnish with a lemon wedge and a celery stalk.",
+        "minTemp": "45°F",
+        "maxTemp": "75°F",
+        "image": ""
+    },
+    {
+        "cocktailName": "Boulevardier",
+        "recipeIngredients": ["1 oz Bourbon or Rye whiskey", "1 oz Campari", "1 oz Sweet vermouth", "Orange twist for garnish"],
+        "recipeInstructions": "Stir bourbon or rye whiskey, Campari, and sweet vermouth over ice. Strain into a chilled cocktail glass or serve over ice in a rocks glass. Garnish with an orange twist.",
+        "minTemp": "50°F",
+        "maxTemp": "70°F",
+        "image": ""
+    },
+    {
+        "cocktailName": "Clover Club",
+        "recipeIngredients": ["1 1/2 oz Gin", "1/2 oz Raspberry syrup", "1/2 oz Lemon juice", "1 Egg white"],
+        "recipeInstructions": "Combine gin, raspberry syrup, lemon juice, and egg white in a shaker. Shake without ice, then add ice and shake again. Strain into a chilled cocktail glass.",
+        "minTemp": "50°F",
+        "maxTemp": "70°F",
+        "image": ""
+    },
+    {
+        "cocktailName": "Last Word",
+        "recipeIngredients": ["3/4 oz Gin", "3/4 oz Green Chartreuse", "3/4 oz Maraschino liqueur", "3/4 oz Lime juice"],
+        "recipeInstructions": "Shake gin, Green Chartreuse, maraschino liqueur, and lime juice with ice. Strain into a chilled cocktail glass.",
+        "minTemp": "50°F",
+        "maxTemp": "70°F",
+        "image": ""
+    },
+    {
+        "cocktailName": "Paper Plane",
+        "recipeIngredients": ["3/4 oz Bourbon", "3/4 oz Aperol", "3/4 oz Amaro Nonino", "3/4 oz Lemon juice"],
+        "recipeInstructions": "Shake bourbon, Aperol, Amaro Nonino, and lemon juice with ice. Strain into a chilled cocktail glass.",
+        "minTemp": "50°F",
+        "maxTemp": "70°F",
+        "image": ""
+    },
+    {
+        "cocktailName": "Bee's Knees",
+        "recipeIngredients": ["2 oz Gin", "3/4 oz Lemon juice", "1/2 oz Honey syrup"],
+        "recipeInstructions": "Shake gin, lemon juice, and honey syrup with ice. Strain into a chilled cocktail glass.",
+        "minTemp": "55°F",
+        "maxTemp": "75°F",
+        "image": ""
+    },
+    {
+        "cocktailName": "Corpse Reviver #2",
+        "recipeIngredients": ["3/4 oz Gin", "3/4 oz Lemon juice", "3/4 oz Cointreau", "3/4 oz Lillet Blanc", "1 dash Absinthe"],
+        "recipeInstructions": "Shake gin, lemon juice, Cointreau, Lillet Blanc, and absinthe with ice. Strain into a chilled cocktail glass.",
+        "minTemp": "50°F",
+        "maxTemp": "70°F",
+        "image": ""
+    },
+    {
+        "cocktailName": "El Diablo",
+        "recipeIngredients": ["1 1/2 oz Tequila", "1/2 oz Crème de Cassis", "1/2 oz Lime juice", "Ginger beer", "Lime wedge for garnish"],
+        "recipeInstructions": "Shake tequila, crème de cassis, and lime juice with ice. Strain into an ice-filled Collins glass. Top with ginger beer. Garnish with a lime wedge.",
+        "minTemp": "65°F",
+        "maxTemp": "85°F",
+        "image": ""
+    },
+    {
+        "cocktailName": "Gold Rush",
+        "recipeIngredients": ["2 oz Bourbon", "3/4 oz Lemon juice", "3/4 oz Honey syrup"],
+        "recipeInstructions": "Shake bourbon, lemon juice, and honey syrup with ice. Strain into an ice-filled old-fashioned glass.",
+        "minTemp": "50°F",
+        "maxTemp": "70°F",
+        "image": ""
+    },
+    {
+        "cocktailName": "Penicillin",
+        "recipeIngredients": ["2 oz Blended Scotch whisky", "3/4 oz Lemon juice", "3/4 oz Honey-ginger syrup", "1/4 oz Islay single malt Scotch", "Candied ginger for garnish"],
+        "recipeInstructions": "Shake blended Scotch whisky, lemon juice, and honey-ginger syrup with ice. Strain into a rocks glass filled with ice. Float the Islay Scotch on top. Garnish with candied ginger.",
+        "minTemp": "40°F",
+        "maxTemp": "60°F",
+        "image": ""
+    },
+    {
+        "cocktailName": "Alabama Slammer",
+        "recipeIngredients": ["1 oz Southern Comfort", "1 oz Amaretto", "1 oz Sloe gin", "2 oz Orange juice"],
+        "recipeInstructions": "Shake Southern Comfort, amaretto, sloe gin, and orange juice with ice. Strain into a highball glass filled with ice.",
+        "minTemp": "65°F",
+        "maxTemp": "85°F",
+        "image": ""
+    },
+    {
+        "cocktailName": "Brandy Alexander",
+        "recipeIngredients": ["1 oz Cognac", "1 oz Dark crème de cacao", "1 oz Cream", "Nutmeg for garnish"],
+        "recipeInstructions": "Shake cognac, dark crème de cacao, and cream with ice. Strain into a chilled cocktail glass. Garnish with nutmeg.",
+        "minTemp": "40°F",
+        "maxTemp": "60°F",
+        "image": ""
+    },
+    {
+        "cocktailName": "Cable Car",
+        "recipeIngredients": ["1 1/2 oz Spiced rum", "3/4 oz Orange curaçao", "1/2 oz Lemon juice", "Cinnamon sugar rim"],
+        "recipeInstructions": "Rim a cocktail glass with cinnamon sugar. Shake spiced rum, orange curaçao, and lemon juice with ice. Strain into the prepared glass.",
+        "minTemp": "50°F",
+        "maxTemp": "70°F",
+        "image": ""
+    },
+    {
+        "cocktailName": "French 77",
+        "recipeIngredients": ["1 oz Elderflower liqueur", "1/2 oz Lemon juice", "Champagne", "Lemon twist for garnish"],
+        "recipeInstructions": "Pour elderflower liqueur and lemon juice into a champagne flute. Top with champagne. Garnish with a lemon twist.",
+        "minTemp": "45°F",
+        "maxTemp": "65°F",
+        "image": ""
+    },
+    {
+        "cocktailName": "Irish Coffee",
+        "recipeIngredients": ["1 1/2 oz Irish whiskey", "1 oz Brown sugar syrup", "Hot coffee", "Cream"],
+        "recipeInstructions": "Pour Irish whiskey and brown sugar syrup into a mug. Fill with hot coffee. Gently float cream on top.",
+        "minTemp": "30°F",
+        "maxTemp": "50°F",
+        "image": ""
+    },
+    {
+        "cocktailName": "Negroni Sbagliato",
+        "recipeIngredients": ["1 oz Campari", "1 oz Sweet vermouth", "Prosecco", "Orange slice for garnish"],
+        "recipeInstructions": "Pour Campari and sweet vermouth into an ice-filled glass. Top with Prosecco. Stir gently. Garnish with an orange slice.",
+        "minTemp": "55°F",
+        "maxTemp": "75°F",
+        "image": ""
+    },
+    {
+        "cocktailName": "Old Cuban",
+        "recipeIngredients": ["1 1/2 oz Aged rum", "3/4 oz Lime juice", "1 oz Simple syrup", "2 dashes Angostura bitters", "Mint leaves", "Champagne"],
+        "recipeInstructions": "Muddle mint leaves with lime juice and simple syrup. Add aged rum and bitters. Shake with ice. Strain into a glass and top with Champagne.",
+        "minTemp": "60°F",
+        "maxTemp": "80°F",
+        "image": ""
+    },
+    {
+        "cocktailName": "Planter's Punch",
+        "recipeIngredients": ["2 oz Dark rum", "1 oz Fresh lime juice", "1/2 oz Grenadine", "1/2 oz Simple syrup", "2 dashes Angostura bitters", "Orange slice for garnish", "Cherry for garnish"],
+        "recipeInstructions": "Shake dark rum, lime juice, grenadine, simple syrup, and bitters with ice. Strain into an ice-filled glass. Garnish with an orange slice and a cherry.",
+        "minTemp": "70°F",
+        "maxTemp": "90°F",
+        "image": ""
+    },
+    {
+        "cocktailName": "Ramos Gin Fizz",
+        "recipeIngredients": ["2 oz Gin", "1/2 oz Fresh lemon juice", "1/2 oz Fresh lime juice", "1 oz Simple syrup", "3 dashes Orange flower water", "2 oz Cream", "1 Egg white", "Soda water"],
+        "recipeInstructions": "Shake gin, lemon juice, lime juice, simple syrup, orange flower water, cream, and egg white without ice. Add ice and shake again. Strain into a glass and top with soda water.",
+        "minTemp": "50°F",
+        "maxTemp": "70°F",
+        "image": ""
+    }
+]

@@ -1,6 +1,7 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
+import scattered from "../assets/icons/scattered_clouds_01.png"
 
-export default function Recommendation({weather, cocktail}) {
+export default function Recommendation({ weather, cocktail }) {
   useEffect(() => {
     console.log(`cocktail: ${cocktail.drinkName}`);
   }, [cocktail]);
@@ -10,40 +11,43 @@ export default function Recommendation({weather, cocktail}) {
       <main className="container mx-auto p-4">
         <section className="weather-display mb-6 bg-white p-6 rounded-md shadow-md">
           <div className="temp-display">
-            <h2 className="text-xl font-bold mb-4">Current Weather Conditions!</h2>
+            <h2 className="text-xl font-bold mb-4">
+              Current Weather Conditions!
+            </h2>
             <p className="mb-4">
               After searching hundreds of different cocktails, we have made the
               following recommendation based on the current weather in your
               area!
             </p>
             <p>
-              Current temp: <span id="temp"></span>&deg;
+              Current temp: <span id="temp">{Math.round(weather[0])}</span>
+              &deg;F /{" "}
+              <span id="temp">{Math.round((weather[0] - 32) * (5 / 9))}</span>
+              &deg;C
             </p>
             <p>
-              Conditions: <span id="conditions"></span>
+              Conditions:{" "}
+              <span id="conditions">
+                {weather[1][0].toUpperCase() + weather[1].slice(1)}
+              </span>
             </p>
-            <div className="flex justify-center mt-4" id="icon"></div>
+            <img src={scattered}  />
           </div>
           <div className="forecast"></div>
         </section>
 
-        <a
-          href="../pages/recipe.html"
-          className="block bg-white p-6 rounded-md shadow-md hover:bg-gray-100 transition"
-        >
-          <section className="flex flex-col items-center">
-            <h3 className="text-xl font-bold mb-4" id="cocktail-name">
-              {cocktail.drinkName}
-            </h3>
-            <p className="mb-4">(click anywhere here!)</p>
-            <img
-              id="cocktail-image"
-              src={cocktail.imageUrl}
-              alt="Cocktail Photo"
-              className="w-full rounded-md"
-            />
-          </section>
-        </a>
+        <section className="flex flex-col items-center">
+          <h3 className="text-xl font-bold mb-4" id="cocktail-name">
+            {cocktail.drinkName}
+          </h3>
+          <p className="mb-4">(click anywhere here!)</p>
+          <img
+            id="cocktail-image"
+            src={cocktail.imageUrl}
+            alt="Cocktail Photo"
+            className="w-full rounded-md"
+          />
+        </section>
       </main>
     </div>
   );

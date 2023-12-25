@@ -81,7 +81,38 @@ export async function getCocktailImage(name) {
   var loadedCocktail = name;
   console.log("loadedCocktail: ", loadedCocktail);
 
-  const url = `https://google-search83.p.rapidapi.com/google/search_image?query=cocktail%20%2B%20recipe%20%2B%20%22${loadedCocktail}%22&gl=us&lr=en&num=10&start=0&sort=relevance`;
+  const query = `"${loadedCocktail} cocktail" "close-up" "high resolution" imagesize:large`;
+  const encodedQuery = encodeURIComponent(query);
+
+  // const url = "https://google-api31.p.rapidapi.com/imagesearch";
+  // const options = {
+  //   method: "POST",
+  //   headers: {
+  //     "content-type": "application/json",
+  //     "X-RapidAPI-Key": "7df2415608mshf6be38a9814c3b3p14bd14jsncc475252c4dd",
+  //     "X-RapidAPI-Host": "google-api31.p.rapidapi.com",
+  //   },
+  //   body: {
+  //     text: "margarita cocktail",
+  //     safesearch: "off",
+  //     region: "wt-wt",
+  //     color: "",
+  //     size: "",
+  //     type_image: "",
+  //     layout: "",
+  //     max_results: 100,
+  //   },
+  // };
+
+  // try {
+  //   const response = await fetch(url, options);
+  //   const result = await response.text();
+  //   console.log(result);
+  // } catch (error) {
+  //   console.error(error);
+  // }
+
+  const url = `https://google-search83.p.rapidapi.com/google/search_image?query=${encodedQuery}&gl=us&lr=en&num=10&start=0&sort=relevance`;
   const options = {
     method: "GET",
     headers: {
@@ -92,10 +123,14 @@ export async function getCocktailImage(name) {
 
   try {
     const response = await fetch(url, options);
-    const result = await response.json();
-    let imageURL = result[0].url
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+    console.log(`data: ${data}`);
+    let imageURL = data[0].url;
     console.log("IMAGE SEARCH RESULT: ", imageURL);
-    return imageURL
+    return imageURL;
   } catch (error) {
     console.error(error);
   }
