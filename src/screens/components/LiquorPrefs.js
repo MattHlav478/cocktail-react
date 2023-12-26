@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ToggleSwitch from "./subcomponents/ToggleSwitch";
-import { drinkFinder } from "../../services/cocktailSearch";
+import { drinkFinder } from "../../services/localCocktailSearch";
 
 export default function LiquorPrefs({
   setModalState,
@@ -27,12 +27,8 @@ export default function LiquorPrefs({
 
   async function handleLiquorPrefs() {
     let cocktailData = await drinkFinder(liquorPrefs, weather);
-    setCocktail({
-      drinkName: cocktailData[0][0],
-      ingredients: cocktailData[0][1],
-      recipe: cocktailData[0][3],
-      imageUrl: cocktailData[1],
-    });
+    console.log(cocktailData);
+    setCocktail(cocktailData);
     setModalState("recommendation");
   }
 

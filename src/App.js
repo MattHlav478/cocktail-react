@@ -8,20 +8,22 @@ function App() {
   const [citySelected, setCitySelected] = useState(false);
   const [weather, setWeather] = useState("");
   const [cocktail, setCocktail] = useState({
-    drinkName: "Default Drink Name",
-    ingredients: [
-      "ingredient_1",
-      "ingredient_2",
-      "ingredient_3",
-      "ingredient_4",
+    cocktailName: "Default Cocktail",
+    recipeIngredients: [
+      "ingredient 1",
+      "ingredient 2",
+      "ingredient 3",
+      "ingredient 4",
     ],
-    recipe: "This is the default recipe",
-    imageUrl:
-      "https://cdn.i-scmp.com/sites/default/files/styles/768x768/public/d8/images/methode/2020/04/29/867d59ba-89d1-11ea-8a72-3b4a65ec119d_image_hires_123712.jpg?itok=sJRdANpF&v=1588135040",
+    recipeInstructions:
+      "Here are some default instructions.",
+    minTemp: "75°F",
+    maxTemp: "100°F",
+    image: "default.png",
   });
 
   useEffect(() => {
-    console.log(cocktail.drinkName);
+    console.log(cocktail.cocktailName);
   }, [cocktail]);
 
   return (

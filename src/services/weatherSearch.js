@@ -53,7 +53,7 @@ export function getWeather(
       return response.json();
     })
     .then(function (data) {
-      let currentTemp = data.current.temp;
+      let currentTemp = Math.round(data.current.temp);
       let currentWeather = data.current.weather[0].description;
       let weatherIcon = data.current.weather[0].icon;
 

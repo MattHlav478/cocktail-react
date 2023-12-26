@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import scattered from "../assets/icons/scattered_clouds_01.png"
+import scattered from "../assets/icons/scattered_clouds_01.png";
 
 export default function Recommendation({ weather, cocktail }) {
   useEffect(() => {
-    console.log(`cocktail: ${cocktail.drinkName}`);
+    console.log(`cocktail: ${cocktail.cocktailName}`);
   }, [cocktail]);
 
   return (
@@ -20,7 +20,7 @@ export default function Recommendation({ weather, cocktail }) {
               area!
             </p>
             <p>
-              Current temp: <span id="temp">{Math.round(weather[0])}</span>
+              Current temp: <span id="temp">{weather[0]}</span>
               &deg;F /{" "}
               <span id="temp">{Math.round((weather[0] - 32) * (5 / 9))}</span>
               &deg;C
@@ -31,19 +31,19 @@ export default function Recommendation({ weather, cocktail }) {
                 {weather[1][0].toUpperCase() + weather[1].slice(1)}
               </span>
             </p>
-            <img src={scattered}  />
+            <img src={scattered} />
           </div>
           <div className="forecast"></div>
         </section>
 
         <section className="flex flex-col items-center">
           <h3 className="text-xl font-bold mb-4" id="cocktail-name">
-            {cocktail.drinkName}
+            {cocktail.cocktailName}
           </h3>
           <p className="mb-4">(click anywhere here!)</p>
           <img
             id="cocktail-image"
-            src={cocktail.imageUrl}
+            src={require(`../assets/images/${cocktail.image}`)}
             alt="Cocktail Photo"
             className="w-full rounded-md"
           />
