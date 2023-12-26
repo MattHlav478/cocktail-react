@@ -325,7 +325,7 @@
         "recipeInstructions": "Combine gin, cherry liqueur, Cointreau, Benedictine, pineapple juice, lime juice, grenadine, and bitters in a shaker with ice. Shake well. Strain into an ice-filled Collins glass. Top with club soda. Garnish with a cherry and a slice of pineapple.",
         "minTemp": "70°F",
         "maxTemp": "90°F",
-        "image": ""
+        "image": "singapore_sling.png"
     },
     {
         "cocktailName": "Kir Royale",
@@ -333,7 +333,7 @@
         "recipeInstructions": "Pour Crème de Cassis into a champagne flute. Gently pour champagne over it. Garnish with a lemon twist.",
         "minTemp": "45°F",
         "maxTemp": "65°F",
-        "image": ""
+        "image": "kir_royale.png"
     },
     {
         "cocktailName": "Godfather",
@@ -341,7 +341,7 @@
         "recipeInstructions": "Pour Scotch whisky and amaretto into an old-fashioned glass filled with ice. Stir gently.",
         "minTemp": "50°F",
         "maxTemp": "70°F",
-        "image": ""
+        "image": "godfather.png"
     },
     {
         "cocktailName": "Sea Breeze",
@@ -349,7 +349,7 @@
         "recipeInstructions": "Pour vodka, cranberry juice, and grapefruit juice into a highball glass filled with ice. Stir well. Garnish with a lime wedge.",
         "minTemp": "70°F",
         "maxTemp": "90°F",
-        "image": ""
+        "image": "sea_breeze.png"
     },
     {
         "cocktailName": "Pisco Sour",
@@ -357,7 +357,7 @@
         "recipeInstructions": "Combine Pisco, lime juice, simple syrup, and egg white in a shaker. Shake vigorously without ice. Add ice and shake again. Strain into a coupe glass. Garnish with a few drops of Angostura bitters.",
         "minTemp": "60°F",
         "maxTemp": "80°F",
-        "image": ""
+        "image": "pisco_sour.png"
     },
     {
         "cocktailName": "Hemingway Daiquiri",
@@ -365,7 +365,7 @@
         "recipeInstructions": "Shake rum, grapefruit juice, maraschino liqueur, and lime juice with ice. Strain into a chilled cocktail glass.",
         "minTemp": "70°F",
         "maxTemp": "90°F",
-        "image": ""
+        "image": "hemingway_daiquiri.png"
     },
     {
         "cocktailName": "French Martini",
@@ -373,7 +373,7 @@
         "recipeInstructions": "Shake vodka, Chambord, and pineapple juice with ice. Strain into a chilled cocktail glass. Garnish with a raspberry or a lemon twist.",
         "minTemp": "50°F",
         "maxTemp": "70°F",
-        "image": ""
+        "image": "french_martini.png"
     },
     {
         "cocktailName": "Grasshopper",
@@ -381,7 +381,7 @@
         "recipeInstructions": "Shake green crème de menthe, white crème de cacao, and cream with ice. Strain into a chilled cocktail glass.",
         "minTemp": "40°F",
         "maxTemp": "60°F",
-        "image": ""
+        "image": "grasshopper.png"
     },
     {
         "cocktailName": "Red Snapper",
@@ -389,7 +389,7 @@
         "recipeInstructions": "In a shaker, combine gin, tomato juice, lemon juice, Tabasco, Worcestershire sauce, celery salt, pepper, and smoked paprika. Fill with ice and shake gently. Strain into an ice-filled glass. Garnish with a lemon wedge and a celery stalk.",
         "minTemp": "45°F",
         "maxTemp": "75°F",
-        "image": ""
+        "image": "red_snapper.png"
     },
     {
         "cocktailName": "Boulevardier",
@@ -397,7 +397,7 @@
         "recipeInstructions": "Stir bourbon or rye whiskey, Campari, and sweet vermouth over ice. Strain into a chilled cocktail glass or serve over ice in a rocks glass. Garnish with an orange twist.",
         "minTemp": "50°F",
         "maxTemp": "70°F",
-        "image": ""
+        "image": "boulevardier.png"
     },
     {
         "cocktailName": "Clover Club",
@@ -405,7 +405,7 @@
         "recipeInstructions": "Combine gin, raspberry syrup, lemon juice, and egg white in a shaker. Shake without ice, then add ice and shake again. Strain into a chilled cocktail glass.",
         "minTemp": "50°F",
         "maxTemp": "70°F",
-        "image": ""
+        "image": "clover_club.png"
     },
     {
         "cocktailName": "Last Word",
@@ -413,7 +413,7 @@
         "recipeInstructions": "Shake gin, Green Chartreuse, maraschino liqueur, and lime juice with ice. Strain into a chilled cocktail glass.",
         "minTemp": "50°F",
         "maxTemp": "70°F",
-        "image": ""
+        "image": "default.png"
     },
     {
         "cocktailName": "Paper Plane",
@@ -421,7 +421,7 @@
         "recipeInstructions": "Shake bourbon, Aperol, Amaro Nonino, and lemon juice with ice. Strain into a chilled cocktail glass.",
         "minTemp": "50°F",
         "maxTemp": "70°F",
-        "image": ""
+        "image": "default.png"
     },
     {
         "cocktailName": "Bee's Knees",
@@ -429,7 +429,7 @@
         "recipeInstructions": "Shake gin, lemon juice, and honey syrup with ice. Strain into a chilled cocktail glass.",
         "minTemp": "55°F",
         "maxTemp": "75°F",
-        "image": ""
+        "image": "default.png"
     },
     {
         "cocktailName": "Corpse Reviver #2",
@@ -437,7 +437,7 @@
         "recipeInstructions": "Shake gin, lemon juice, Cointreau, Lillet Blanc, and absinthe with ice. Strain into a chilled cocktail glass.",
         "minTemp": "50°F",
         "maxTemp": "70°F",
-        "image": ""
+        "image": "default.png"
     },
     {
         "cocktailName": "El Diablo",
@@ -445,7 +445,7 @@
         "recipeInstructions": "Shake tequila, crème de cassis, and lime juice with ice. Strain into an ice-filled Collins glass. Top with ginger beer. Garnish with a lime wedge.",
         "minTemp": "65°F",
         "maxTemp": "85°F",
-        "image": ""
+        "image": "default.png"
     },
     {
         "cocktailName": "Gold Rush",
@@ -453,7 +453,7 @@
         "recipeInstructions": "Shake bourbon, lemon juice, and honey syrup with ice. Strain into an ice-filled old-fashioned glass.",
         "minTemp": "50°F",
         "maxTemp": "70°F",
-        "image": ""
+        "image": "default.png"
     },
     {
         "cocktailName": "Penicillin",
@@ -461,7 +461,7 @@
         "recipeInstructions": "Shake blended Scotch whisky, lemon juice, and honey-ginger syrup with ice. Strain into a rocks glass filled with ice. Float the Islay Scotch on top. Garnish with candied ginger.",
         "minTemp": "40°F",
         "maxTemp": "60°F",
-        "image": ""
+        "image": "default.png"
     },
     {
         "cocktailName": "Alabama Slammer",
@@ -469,7 +469,7 @@
         "recipeInstructions": "Shake Southern Comfort, amaretto, sloe gin, and orange juice with ice. Strain into a highball glass filled with ice.",
         "minTemp": "65°F",
         "maxTemp": "85°F",
-        "image": ""
+        "image": "default.png"
     },
     {
         "cocktailName": "Brandy Alexander",
@@ -477,7 +477,7 @@
         "recipeInstructions": "Shake cognac, dark crème de cacao, and cream with ice. Strain into a chilled cocktail glass. Garnish with nutmeg.",
         "minTemp": "40°F",
         "maxTemp": "60°F",
-        "image": ""
+        "image": "default.png"
     },
     {
         "cocktailName": "Cable Car",
@@ -485,7 +485,7 @@
         "recipeInstructions": "Rim a cocktail glass with cinnamon sugar. Shake spiced rum, orange curaçao, and lemon juice with ice. Strain into the prepared glass.",
         "minTemp": "50°F",
         "maxTemp": "70°F",
-        "image": ""
+        "image": "default.png"
     },
     {
         "cocktailName": "French 77",
@@ -493,7 +493,7 @@
         "recipeInstructions": "Pour elderflower liqueur and lemon juice into a champagne flute. Top with champagne. Garnish with a lemon twist.",
         "minTemp": "45°F",
         "maxTemp": "65°F",
-        "image": ""
+        "image": "default.png"
     },
     {
         "cocktailName": "Irish Coffee",
@@ -501,7 +501,7 @@
         "recipeInstructions": "Pour Irish whiskey and brown sugar syrup into a mug. Fill with hot coffee. Gently float cream on top.",
         "minTemp": "30°F",
         "maxTemp": "50°F",
-        "image": ""
+        "image": "default.png"
     },
     {
         "cocktailName": "Negroni Sbagliato",
@@ -509,7 +509,7 @@
         "recipeInstructions": "Pour Campari and sweet vermouth into an ice-filled glass. Top with Prosecco. Stir gently. Garnish with an orange slice.",
         "minTemp": "55°F",
         "maxTemp": "75°F",
-        "image": ""
+        "image": "default.png"
     },
     {
         "cocktailName": "Old Cuban",
@@ -517,7 +517,7 @@
         "recipeInstructions": "Muddle mint leaves with lime juice and simple syrup. Add aged rum and bitters. Shake with ice. Strain into a glass and top with Champagne.",
         "minTemp": "60°F",
         "maxTemp": "80°F",
-        "image": ""
+        "image": "default.png"
     },
     {
         "cocktailName": "Planter's Punch",
@@ -525,7 +525,7 @@
         "recipeInstructions": "Shake dark rum, lime juice, grenadine, simple syrup, and bitters with ice. Strain into an ice-filled glass. Garnish with an orange slice and a cherry.",
         "minTemp": "70°F",
         "maxTemp": "90°F",
-        "image": ""
+        "image": "default.png"
     },
     {
         "cocktailName": "Ramos Gin Fizz",
@@ -533,6 +533,6 @@
         "recipeInstructions": "Shake gin, lemon juice, lime juice, simple syrup, orange flower water, cream, and egg white without ice. Add ice and shake again. Strain into a glass and top with soda water.",
         "minTemp": "50°F",
         "maxTemp": "70°F",
-        "image": ""
+        "image": "default.png"
     }
 ]
