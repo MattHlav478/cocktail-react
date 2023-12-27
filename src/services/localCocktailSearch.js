@@ -4,14 +4,14 @@ import data from "../assets/data/recipes.json";
 export async function drinkFinder(liquorPrefs, weather) {
   var getCocktailData = async function () {
     console.log(`choices: ${liquorPrefs}`);
-    let choices = liquorPrefs ? liquorPrefs : null;
+    let choices = liquorPrefs ? liquorPrefs : [];
     let currentTemp = weather[0];
 
     return data.filter((cocktail) => {
       const isTempSuitable =
         currentTemp >= parseInt(cocktail.minTemp) &&
         currentTemp <= parseInt(cocktail.maxTemp);
-      if (choices) {
+      if (choices.length != 0) {
         const hasPreferredLiquor = choices.some((liquor) =>
           cocktail.recipeIngredients.some((ingredient) =>
             ingredient.toLowerCase().includes(liquor.toLowerCase())
