@@ -413,7 +413,7 @@
         "recipeInstructions": "Shake gin, Green Chartreuse, maraschino liqueur, and lime juice with ice. Strain into a chilled cocktail glass.",
         "minTemp": "50°F",
         "maxTemp": "70°F",
-        "image": "default.png"
+        "image": "last_word.png"
     },
     {
         "cocktailName": "Paper Plane",
@@ -421,7 +421,7 @@
         "recipeInstructions": "Shake bourbon, Aperol, Amaro Nonino, and lemon juice with ice. Strain into a chilled cocktail glass.",
         "minTemp": "50°F",
         "maxTemp": "70°F",
-        "image": "default.png"
+        "image": "paper_plane.png"
     },
     {
         "cocktailName": "Bee's Knees",
@@ -429,7 +429,7 @@
         "recipeInstructions": "Shake gin, lemon juice, and honey syrup with ice. Strain into a chilled cocktail glass.",
         "minTemp": "55°F",
         "maxTemp": "75°F",
-        "image": "default.png"
+        "image": "bees_knees.png"
     },
     {
         "cocktailName": "Corpse Reviver #2",
@@ -437,7 +437,7 @@
         "recipeInstructions": "Shake gin, lemon juice, Cointreau, Lillet Blanc, and absinthe with ice. Strain into a chilled cocktail glass.",
         "minTemp": "50°F",
         "maxTemp": "70°F",
-        "image": "default.png"
+        "image": "corpse_reviver_2.png"
     },
     {
         "cocktailName": "El Diablo",
@@ -445,7 +445,7 @@
         "recipeInstructions": "Shake tequila, crème de cassis, and lime juice with ice. Strain into an ice-filled Collins glass. Top with ginger beer. Garnish with a lime wedge.",
         "minTemp": "65°F",
         "maxTemp": "85°F",
-        "image": "default.png"
+        "image": "el_diablo.png"
     },
     {
         "cocktailName": "Gold Rush",
@@ -453,15 +453,7 @@
         "recipeInstructions": "Shake bourbon, lemon juice, and honey syrup with ice. Strain into an ice-filled old-fashioned glass.",
         "minTemp": "50°F",
         "maxTemp": "70°F",
-        "image": "default.png"
-    },
-    {
-        "cocktailName": "Penicillin",
-        "recipeIngredients": ["2 oz Blended Scotch whisky", "3/4 oz Lemon juice", "3/4 oz Honey-ginger syrup", "1/4 oz Islay single malt Scotch", "Candied ginger for garnish"],
-        "recipeInstructions": "Shake blended Scotch whisky, lemon juice, and honey-ginger syrup with ice. Strain into a rocks glass filled with ice. Float the Islay Scotch on top. Garnish with candied ginger.",
-        "minTemp": "40°F",
-        "maxTemp": "60°F",
-        "image": "default.png"
+        "image": "gold_rush.png"
     },
     {
         "cocktailName": "Alabama Slammer",
@@ -469,7 +461,7 @@
         "recipeInstructions": "Shake Southern Comfort, amaretto, sloe gin, and orange juice with ice. Strain into a highball glass filled with ice.",
         "minTemp": "65°F",
         "maxTemp": "85°F",
-        "image": "default.png"
+        "image": "alabama_slammer.png"
     },
     {
         "cocktailName": "Brandy Alexander",
