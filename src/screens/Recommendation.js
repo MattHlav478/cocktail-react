@@ -1,10 +1,77 @@
 import React, { useEffect, useState } from "react";
-import scattered from "../assets/icons/scattered_clouds_01.png";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faSun,
+  faMoon,
+  faCloudSun,
+  faCloudMoon,
+  faCloud,
+  faCloudShowersHeavy,
+  faCloudSunRain,
+  faCloudMoonRain,
+  faCloudBolt,
+  faSnowflake,
+  faSmog,
+} from "@fortawesome/free-solid-svg-icons";
+
+const useWeatherIcon = (weatherCode) => {
+  const [icon, setIcon] = useState(null);
+
+  useEffect(() => {
+    switch (weatherCode) {
+      case "02d":
+        setIcon(faSun);
+        break;
+      case "02n":
+        setIcon(faMoon);
+        break;
+      case "03d":
+        setIcon(faCloudSun);
+        break;
+      case "03n":
+        setIcon(faCloudMoon);
+        break;
+      case "04d":
+      case "04n":
+        setIcon(faCloud);
+        break;
+      case "09d":
+      case "09n":
+        setIcon(faCloudShowersHeavy);
+        break;
+      case "10d":
+        setIcon(faCloudSunRain);
+        break;
+      case "10n":
+        setIcon(faCloudMoonRain);
+        break;
+      case "11d":
+      case "11n":
+        setIcon(faCloudBolt);
+        break;
+      case "13d":
+      case "13n":
+        setIcon(faSnowflake);
+        break;
+      case "50d":
+      case "50n":
+        setIcon(faSmog);
+        break;
+      default:
+        setIcon(null);
+    }
+  }, [weatherCode]);
+
+  return icon;
+};
 
 export default function Recommendation({ weather, cocktail }) {
   useEffect(() => {
     console.log(`cocktail: ${cocktail.cocktailName}`);
   }, [cocktail]);
+
+  const icon = useWeatherIcon(weather[2]);
 
   return (
     <div className="min-h-screen bg-purple-100 font-sans">
@@ -31,7 +98,7 @@ export default function Recommendation({ weather, cocktail }) {
                 {weather[1][0].toUpperCase() + weather[1].slice(1)}
               </span>
             </p>
-            <img src={scattered} />
+            <FontAwesomeIcon icon={icon} size="5x" color="purple" />
           </div>
           <div className="forecast"></div>
         </section>

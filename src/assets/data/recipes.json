@@ -469,7 +469,7 @@
         "recipeInstructions": "Shake cognac, dark crème de cacao, and cream with ice. Strain into a chilled cocktail glass. Garnish with nutmeg.",
         "minTemp": "40°F",
         "maxTemp": "60°F",
-        "image": "default.png"
+        "image": "brandy_alexander.png"
     },
     {
         "cocktailName": "Cable Car",
@@ -477,7 +477,7 @@
         "recipeInstructions": "Rim a cocktail glass with cinnamon sugar. Shake spiced rum, orange curaçao, and lemon juice with ice. Strain into the prepared glass.",
         "minTemp": "50°F",
         "maxTemp": "70°F",
-        "image": "default.png"
+        "image": "cable_car.png"
     },
     {
         "cocktailName": "French 77",
@@ -485,7 +485,7 @@
         "recipeInstructions": "Pour elderflower liqueur and lemon juice into a champagne flute. Top with champagne. Garnish with a lemon twist.",
         "minTemp": "45°F",
         "maxTemp": "65°F",
-        "image": "default.png"
+        "image": "french_77.png"
     },
     {
         "cocktailName": "Irish Coffee",
@@ -493,7 +493,7 @@
         "recipeInstructions": "Pour Irish whiskey and brown sugar syrup into a mug. Fill with hot coffee. Gently float cream on top.",
         "minTemp": "30°F",
         "maxTemp": "50°F",
-        "image": "default.png"
+        "image": "irish_coffee.png"
     },
     {
         "cocktailName": "Negroni Sbagliato",
