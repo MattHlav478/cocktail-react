@@ -29,7 +29,7 @@ export default function Home({
   } else if (modalState === "recipe") {
     nodeRef = recipeRef;
   } else {
-    console.log("error: modalState doesn't match")
+    console.log("error: modalState doesn't match");
   }
 
   const componentMap = {
@@ -53,13 +53,39 @@ export default function Home({
     recipe: <Recipe cocktail={cocktail} />,
   };
 
-  useEffect(()=> {
-    console.log(`modalState: ${modalState}`)
-  },[modalState])
-  
+  useEffect(() => {
+    console.log(`modalState: ${modalState}`);
+  }, [modalState]);
+
   return (
     <>
-      <div className="min-h-screen bg-purple-100 font-sans">
+      <div className="min-h-screen flex justify-center bg-slate-800 font-sans">
+        {/* LOGO */}
+        <div style={{ width: 300, height: 300, position: "relative" }}>
+          
+          <div
+            style={{
+              width: 300,
+              height: 300,
+              left: 0,
+              top: 0,
+              position: "absolute",
+              borderRadius: 50,
+            }}
+            className="bg-roller-3"
+          /><div
+          style={{
+            width: 275,
+            height: 275,
+            left: 13,
+            top: 13,
+            position: "absolute",
+            borderRadius: 35,
+          }}
+          className="bg-slate-800"
+        ></div>
+        </div>
+        {/* END LOGO */}
         <div className="absolute w-full h-3/4 flex flex-col">
           <SwitchTransition mode={"out-in"}>
             <CSSTransition
