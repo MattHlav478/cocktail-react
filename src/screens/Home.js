@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { SwitchTransition, CSSTransition } from "react-transition-group";
 import "./Home.css";
+import MainLogo from "./components/MainLogo";
 import LiquorPrefs from "./components/LiquorPrefs";
 import CitySearch from "./components/CitySearch";
 import Recommendation from "./Recommendation";
@@ -14,13 +15,16 @@ export default function Home({
   cocktail,
   setCocktail,
 }) {
-  const [modalState, setModalState] = useState("citySearch");
+  const [modalState, setModalState] = useState("mainLogo");
+  const mainLogoRef = useRef(null);
   const cityRef = useRef(null);
   const liquorRef = useRef(null);
   const recommendationRef = useRef(null);
   const recipeRef = useRef(null);
   let nodeRef;
-  if (modalState === "citySearch") {
+  if (modalState === "mainLogo") {
+    nodeRef = mainLogoRef;
+  } else if (modalState === "citySearch") {
     nodeRef = cityRef;
   } else if (modalState === "liquorPrefs") {
     nodeRef = liquorRef;
@@ -33,6 +37,14 @@ export default function Home({
   }
 
   const componentMap = {
+    mainLogo: (
+      <MainLogo
+        citySelected={citySelected}
+        setCitySelected={setCitySelected}
+        setWeather={setWeather}
+        setModalState={setModalState}
+      />
+    ),
     citySearch: (
       <CitySearch
         citySelected={citySelected}
@@ -60,32 +72,6 @@ export default function Home({
   return (
     <>
       <div className="min-h-screen flex justify-center bg-slate-800 font-sans">
-        {/* LOGO */}
-        <div style={{ width: 300, height: 300, position: "relative" }}>
-          
-          <div
-            style={{
-              width: 300,
-              height: 300,
-              left: 0,
-              top: 0,
-              position: "absolute",
-              borderRadius: 50,
-            }}
-            className="bg-roller-3"
-          /><div
-          style={{
-            width: 275,
-            height: 275,
-            left: 13,
-            top: 13,
-            position: "absolute",
-            borderRadius: 35,
-          }}
-          className="bg-slate-800"
-        ></div>
-        </div>
-        {/* END LOGO */}
         <div className="absolute w-full h-3/4 flex flex-col">
           <SwitchTransition mode={"out-in"}>
             <CSSTransition
