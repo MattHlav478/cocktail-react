@@ -16,6 +16,7 @@ export default function Home({
   setCocktail,
 }) {
   const [modalState, setModalState] = useState("citySearch");
+  const [query, setQuery] = useState("");
   const mainLogoRef = useRef(null);
   const cityRef = useRef(null);
   const liquorRef = useRef(null);
@@ -41,6 +42,8 @@ export default function Home({
     mainLogo: <MainLogo setModalState={setModalState} />,
     citySearch: (
       <CitySearch
+        query={query}
+        setQuery={setQuery}
         citySelected={citySelected}
         setCitySelected={setCitySelected}
         setWeather={setWeather}
@@ -57,6 +60,7 @@ export default function Home({
     ),
     recommendation: (
       <Recommendation
+        query={query}
         weather={weather}
         cocktail={cocktail}
         setModalState={setModalState}

@@ -66,7 +66,7 @@ const useWeatherIcon = (weatherCode) => {
   return icon;
 };
 
-export default function Recommendation({ weather, cocktail, setModalState }) {
+export default function Recommendation({ query, weather, cocktail, setModalState }) {
   useEffect(() => {
     console.log(`cocktail: ${cocktail.cocktailName}`);
   }, [cocktail]);
@@ -76,11 +76,8 @@ export default function Recommendation({ weather, cocktail, setModalState }) {
   return (
     <div className="btn w-5/6 h-50 flex flex-col justify-center self-center p-2">
       <section className="flex flex-col items-center bg-white mb-4 p-6 rounded-md shadow-md">
-        <h2 className="text-xl font-bold mb-4">Current Weather Conditions!</h2>
-        <p className="mb-4">
-          After searching hundreds of different cocktails, we have made the
-          following recommendation based on the current weather in your area!
-        </p>
+        <h2 className="text-xl font-bold mb-4">Current Weather</h2>
+        <h2 className="text-xl font-bold">{query}</h2>
         <p>
           Current temp: <span id="temp">{weather[0]}</span>
           &deg;F /{" "}

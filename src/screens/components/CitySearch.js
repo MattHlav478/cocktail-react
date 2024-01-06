@@ -3,12 +3,13 @@ import { citySearch } from "../../services/citySearch";
 import { getLatLon } from "../../services/weatherSearch";
 
 export default function CitySearch({
+  query,
+  setQuery,
   citySelected,
   setCitySelected,
   setWeather,
   setModalState,
 }) {
-  const [query, setQuery] = useState("");
   const [searchResults, setSearchResults] = useState(null);
 
   const handleSearch = async (query) => {
@@ -31,7 +32,7 @@ export default function CitySearch({
 
   const handleCitySelection = async (city, state, country) => {
     console.log(city, state);
-    setQuery(`${city}, ${state}`);
+    setQuery(`${city}, ${state}`, `${country}`);
     setCitySelected(true);
     const weatherData = await getLatLon(city, state, country)
     setWeather(weatherData);
