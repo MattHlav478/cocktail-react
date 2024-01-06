@@ -43,6 +43,7 @@ export function getWeather(
 ) {
   let weatherApiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${locationLat}&lon=${locationLon}&exclude={part}&appid=${process.env.REACT_APP_OPENWEATHER_API}&units=imperial`;
   let currentWeatherInfo;
+  console.log(weatherApiUrl)
   return fetch(weatherApiUrl)
     .then(function (response) {
       if (!response.ok) {

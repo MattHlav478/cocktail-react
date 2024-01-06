@@ -66,7 +66,7 @@ const useWeatherIcon = (weatherCode) => {
   return icon;
 };
 
-export default function Recommendation({ weather, cocktail }) {
+export default function Recommendation({ weather, cocktail, setModalState }) {
   useEffect(() => {
     console.log(`cocktail: ${cocktail.cocktailName}`);
   }, [cocktail]);
@@ -74,48 +74,55 @@ export default function Recommendation({ weather, cocktail }) {
   const icon = useWeatherIcon(weather[2]);
 
   return (
-    <div className="min-h-screen bg-purple-100 font-sans">
-      <main className="container mx-auto p-4">
-        <section className="weather-display mb-6 bg-white p-6 rounded-md shadow-md">
-          <div className="temp-display">
-            <h2 className="text-xl font-bold mb-4">
-              Current Weather Conditions!
-            </h2>
-            <p className="mb-4">
-              After searching hundreds of different cocktails, we have made the
-              following recommendation based on the current weather in your
-              area!
-            </p>
-            <p>
-              Current temp: <span id="temp">{weather[0]}</span>
-              &deg;F /{" "}
-              <span id="temp">{Math.round((weather[0] - 32) * (5 / 9))}</span>
-              &deg;C
-            </p>
-            <p>
-              Conditions:{" "}
-              <span id="conditions">
-                {weather[1][0].toUpperCase() + weather[1].slice(1)}
-              </span>
-            </p>
-            <FontAwesomeIcon icon={icon} size="5x" color="purple" />
-          </div>
-          <div className="forecast"></div>
-        </section>
+    <div className="btn w-5/6 h-50 flex flex-col justify-center self-center p-2">
+      <section className="flex flex-col items-center bg-white mb-4 p-6 rounded-md shadow-md">
+        <h2 className="text-xl font-bold mb-4">Current Weather Conditions!</h2>
+        <p className="mb-4">
+          After searching hundreds of different cocktails, we have made the
+          following recommendation based on the current weather in your area!
+        </p>
+        <p>
+          Current temp: <span id="temp">{weather[0]}</span>
+          &deg;F /{" "}
+          <span id="temp">{Math.round((weather[0] - 32) * (5 / 9))}</span>
+          &deg;C
+        </p>
+        <p>
+          Conditions:{" "}
+          <span id="conditions">
+            {weather[1][0].toUpperCase() + weather[1].slice(1)}
+          </span>
+        </p>
+        <FontAwesomeIcon icon={icon} size="5x" color="purple" />
+      </section>
 
-        <section className="flex flex-col items-center">
-          <h3 className="text-xl font-bold mb-4" id="cocktail-name">
-            {cocktail.cocktailName}
-          </h3>
-          <p className="mb-4">(click anywhere here!)</p>
-          <img
-            id="cocktail-image"
-            src={require(`../assets/images/${cocktail.image}`)}
-            alt="Cocktail Photo"
-            className="w-full rounded-md"
-          />
-        </section>
-      </main>
+      <section className="flex flex-col items-center bg-white p-6 rounded-md shadow-md">
+        <h3 className="text-xl font-bold mb-4" id="cocktail-name">
+          {cocktail.cocktailName}
+        </h3>
+        <img
+          id="cocktail-image"
+          src={require(`../assets/images/${cocktail.image}`)}
+          alt="Cocktail Photo"
+          className="w-full rounded-md"
+        />
+        <div>
+          {cocktail.recipeIngredients.map((item, key) => (
+            <p>{item}</p>
+          ))}
+        </div>
+        <div>
+          {cocktail.recipeInstructions}
+        </div>
+        <div className="flex flex-row justify-center">
+          <button
+            className="bg-purple-100 p-4 w-1/2 rounded-xl border-2 border-black"
+            onClick={() => setModalState("citySearch")}
+          >
+            Another?
+          </button>
+        </div>
+      </section>
     </div>
   );
 }

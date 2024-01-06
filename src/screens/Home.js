@@ -15,7 +15,7 @@ export default function Home({
   cocktail,
   setCocktail,
 }) {
-  const [modalState, setModalState] = useState("mainLogo");
+  const [modalState, setModalState] = useState("citySearch");
   const mainLogoRef = useRef(null);
   const cityRef = useRef(null);
   const liquorRef = useRef(null);
@@ -55,7 +55,13 @@ export default function Home({
         weather={weather}
       />
     ),
-    recommendation: <Recommendation weather={weather} cocktail={cocktail} />,
+    recommendation: (
+      <Recommendation
+        weather={weather}
+        cocktail={cocktail}
+        setModalState={setModalState}
+      />
+    ),
     recipe: <Recipe cocktail={cocktail} />,
   };
 
@@ -65,24 +71,24 @@ export default function Home({
 
   return (
     <>
-      <div className="min-h-screen flex justify-center bg-slate-800 font-sans">
-        <div className="absolute w-full h-3/4 flex flex-col">
-          <SwitchTransition mode={"out-in"}>
-            <CSSTransition
-              key={modalState} // Use the state to generate a unique key
-              nodeRef={nodeRef}
-              addEndListener={(done) => {
-                nodeRef.current.addEventListener("transitionend", done, false);
-              }}
-              classNames="fade"
-            >
-              <div ref={nodeRef} className="flex justify-center">
-                {componentMap[modalState]}
-              </div>
-            </CSSTransition>
-          </SwitchTransition>
-        </div>
+      {/* <div className="flex justify-center bg-slate-800 font-sans"> */}
+      <div className="absolute w-full flex flex-col">
+        <SwitchTransition mode={"out-in"}>
+          <CSSTransition
+            key={modalState} // Use the state to generate a unique key
+            nodeRef={nodeRef}
+            addEndListener={(done) => {
+              nodeRef.current.addEventListener("transitionend", done, false);
+            }}
+            classNames="fade"
+          >
+            <div ref={nodeRef} className="flex justify-center">
+              {componentMap[modalState]}
+            </div>
+          </CSSTransition>
+        </SwitchTransition>
       </div>
+      {/* </div> */}
     </>
   );
 }
