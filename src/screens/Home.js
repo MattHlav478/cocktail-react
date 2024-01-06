@@ -21,7 +21,8 @@ export default function Home({
   const liquorRef = useRef(null);
   const recommendationRef = useRef(null);
   const recipeRef = useRef(null);
-  let nodeRef;
+  let nodeRef = useRef(null);
+
   if (modalState === "mainLogo") {
     nodeRef = mainLogoRef;
   } else if (modalState === "citySearch") {
@@ -37,14 +38,7 @@ export default function Home({
   }
 
   const componentMap = {
-    mainLogo: (
-      <MainLogo
-        citySelected={citySelected}
-        setCitySelected={setCitySelected}
-        setWeather={setWeather}
-        setModalState={setModalState}
-      />
-    ),
+    mainLogo: <MainLogo setModalState={setModalState} />,
     citySearch: (
       <CitySearch
         citySelected={citySelected}
