@@ -66,7 +66,12 @@ const useWeatherIcon = (weatherCode) => {
   return icon;
 };
 
-export default function Recommendation({ query, weather, cocktail, setModalState }) {
+export default function Recommendation({
+  query,
+  weather,
+  cocktail,
+  setModalState,
+}) {
   useEffect(() => {
     console.log(`cocktail: ${cocktail.cocktailName}`);
   }, [cocktail]);
@@ -93,24 +98,43 @@ export default function Recommendation({ query, weather, cocktail, setModalState
         <FontAwesomeIcon icon={icon} size="5x" color="purple" />
       </section>
 
-      <section className="flex flex-col items-center bg-white p-6 rounded-md shadow-md">
-        <h3 className="text-xl font-bold mb-4" id="cocktail-name">
+      <section className="flex w-full justify-center items-center mb-4 rounded-md shadow-md">
+        <div className="bars flex-1 h-12">
+          <div className="h-1/5 mb-2 bg-roller-1 rounded-md"></div>
+          <div className="h-1/5 mb-2 bg-roller-2 rounded-md"></div>
+          <div className="h-1/5 mb-2 bg-roller-3 rounded-md"></div>
+        </div>
+        <h3
+          className="flex items-center justify-center grow h-12 text-2xl text-center text-white font-bold"
+          id="cocktail-name"
+        >
           {cocktail.cocktailName}
         </h3>
+        <div className="bars flex-1 h-12">
+          <div className="h-1/5 mb-2 bg-roller-1 rounded-md"></div>
+          <div className="h-1/5 mb-2 bg-roller-2 rounded-md"></div>
+          <div className="h-1/5 mb-2 bg-roller-3 rounded-md"></div>
+        </div>
+      </section>
+      <section className="flex flex-col items-center bg-white mb-4 p-6 rounded-md shadow-md">
         <img
           id="cocktail-image"
           src={require(`../assets/images/${cocktail.image}`)}
           alt="Cocktail Photo"
           className="w-full rounded-md"
         />
+      </section>
+      <section className="flex flex-col items-center bg-white mb-4 p-6 rounded-md shadow-md">
+        <div className="text-xl font-bold mb-4">What You'll Need:</div>
         <div>
           {cocktail.recipeIngredients.map((item, key) => (
             <p>{item}</p>
           ))}
         </div>
-        <div>
-          {cocktail.recipeInstructions}
-        </div>
+        </section>
+        <section className="flex flex-col items-center bg-white mb-4 p-6 rounded-md shadow-md">
+        <div className="text-xl font-bold mb-4">What You'll Need:</div>
+        <div>{cocktail.recipeInstructions}</div>
         <div className="flex flex-row justify-center">
           <button
             className="bg-purple-100 p-4 w-1/2 rounded-xl border-2 border-black"

@@ -9,11 +9,6 @@ export default function LiquorPrefs({
   weather,
 }) {
   const [liquorPrefs, setLiquorPrefs] = useState([]);
-  const [redirect, setRedirect] = useState(false);
-
-  // useEffect(() => {
-  //   console.log(liquorPrefs);
-  // }, [liquorPrefs]);
 
   const handleToggle = (liquor) => {
     setLiquorPrefs((prevPrefs) => {
@@ -27,7 +22,7 @@ export default function LiquorPrefs({
 
   async function handleLiquorPrefs() {
     let cocktailData = await drinkFinder(liquorPrefs, weather);
-    console.log(cocktailData);
+    // console.log(cocktailData);
     setCocktail(cocktailData);
     setModalState("recommendation");
   }

@@ -14,7 +14,6 @@ export async function drinkFinder(liquorPrefs, weather) {
         } else {
           var apiUrl = `https://api.api-ninjas.com/v1/cocktail?ingredients=${name},%20${choices}`;
         }
-        console.log(apiUrl);
         const result = await fetch(apiUrl, {
           method: "GET",
           headers: { "X-Api-Key": process.env.REACT_APP_COCKTAIL_API },
