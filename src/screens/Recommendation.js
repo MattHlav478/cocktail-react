@@ -114,7 +114,7 @@ export default function Recommendation({ query, weather, cocktail, setModalState
         <div className="flex flex-row justify-center">
           <button
             className="bg-purple-100 p-4 w-1/2 rounded-xl border-2 border-black"
-            onClick={() => setModalState("citySearch")}
+            onClick={() => setModalState("mainLogo")}
           >
             Another?
           </button>

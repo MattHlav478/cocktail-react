@@ -76,7 +76,7 @@ export default function Home({
   return (
     <>
       {/* <div className="flex justify-center bg-slate-800 font-sans"> */}
-      <div className="absolute w-full flex flex-col">
+      <div className="absolute w-full h-screen flex flex-col">
         <SwitchTransition mode={"out-in"}>
           <CSSTransition
             key={modalState} // Use the state to generate a unique key
