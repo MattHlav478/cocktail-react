@@ -917,7 +917,8 @@
     ],
     "recipeInstructions": "Combine whiskey, honey, and lemon juice in a mug. Top with hot water and stir until honey is dissolved. Garnish with a lemon slice and a cinnamon stick.",
     "minTemp": null,
-    "maxTemp": "50°F"
+    "maxTemp": "50°F",
+    "image": "default.png"
   },
   {
     "cocktailName": "Mulled Wine",
@@ -932,7 +933,8 @@
     ],
     "recipeInstructions": "Combine all ingredients in a large pot. Gently warm on low to medium heat (avoid boiling) for about 20 minutes. Serve warm with your favorite garnishes.",
     "minTemp": null,
-    "maxTemp": "50°F"
+    "maxTemp": "50°F",
+    "image": "default.png"
   },
   {
     "cocktailName": "Buttered Rum",
@@ -946,7 +948,8 @@
     ],
     "recipeInstructions": "In a mug, combine butter, sugar, cinnamon, and nutmeg. Add the rum and top with boiling water. Stir until the butter is melted and ingredients are well mixed.",
     "minTemp": null,
-    "maxTemp": "50°F"
+    "maxTemp": "50°F",
+    "image": "default.png"
   },
   {
     "cocktailName": "Hot Buttered Apple Cider with Rum",
@@ -961,7 +964,8 @@
     ],
     "recipeInstructions": "In a saucepan, heat apple cider, butter, and brown sugar until hot. Pour into a mug and add rum. Stir with a cinnamon stick and sprinkle with nutmeg and cloves.",
     "minTemp": null,
-    "maxTemp": "50°F"
+    "maxTemp": "50°F",
+    "image": "default.png"
   },
   {
     "cocktailName": "Spiked Hot Chocolate",
@@ -973,7 +977,8 @@
     ],
     "recipeInstructions": "Prepare hot chocolate. Stir in peppermint schnapps or Baileys. Top with whipped cream and chocolate shavings.",
     "minTemp": null,
-    "maxTemp": "50°F"
+    "maxTemp": "50°F",
+    "image": "default.png"
   },
   {
     "cocktailName": "Glogg",
@@ -990,7 +995,8 @@
     ],
     "recipeInstructions": "In a pot, combine all ingredients except brandy. Heat gently without boiling for about 30 minutes. Just before serving, add brandy or aquavit. Serve warm in mugs, ensuring each mug gets a few raisins and almonds.",
     "minTemp": null,
-    "maxTemp": "50°F"
+    "maxTemp": "50°F",
+    "image": "default.png"
   },
   {
     "cocktailName": "Wassail",
@@ -1010,7 +1016,8 @@
     ],
     "recipeInstructions": "Combine all ingredients in a large pot. Bring to a simmer and let cook for 1-2 hours. Serve warm in mugs.",
     "minTemp": null,
-    "maxTemp": "50°F"
+    "maxTemp": "50°F",
+    "image": "default.png"
   },
   {
     "cocktailName": "Hot Gin Punch",
@@ -1027,7 +1034,8 @@
     ],
     "recipeInstructions": "Combine all ingredients in a large pot. Heat gently for about 20 minutes. Serve in punch cups or mugs, garnished with slices of lemon and orange.",
     "minTemp": null,
-    "maxTemp": "50°F"
+    "maxTemp": "50°F",
+    "image": "default.png"
   },
   {
     "cocktailName": "Hot Spiced Cider",
@@ -1042,6 +1050,155 @@
     ],
     "recipeInstructions": "In a large pot, combine all ingredients. Slowly bring to a boil over low heat. Simmer for 10 minutes. Remove from heat and serve in mugs.",
     "minTemp": null,
-    "maxTemp": "50°F"
+    "maxTemp": "50°F",
+    "image": "default.png"
+  },
+  {
+    "cocktailName": "Vodka Hot Toddy",
+    "recipeIngredients": [
+      "1 1/2 oz Vodka",
+      "1 tbsp Honey",
+      "2 tsp Lemon juice",
+      "1 cup Hot water",
+      "Cinnamon stick for garnish",
+      "Lemon slice for garnish"
+    ],
+    "recipeInstructions": "In a mug, combine vodka, honey, and lemon juice. Add hot water and stir until the honey is fully dissolved. Garnish with a lemon slice and a cinnamon stick.",
+    "minTemp": null,
+    "maxTemp": "50°F",
+    "image": "default.png"
+  },
+  {
+    "cocktailName": "Tequila Hot Chocolate",
+    "recipeIngredients": [
+      "1 1/2 oz Tequila",
+      "1 cup Hot chocolate",
+      "Pinch of chili powder",
+      "Whipped cream",
+      "Chocolate shavings for garnish"
+    ],
+    "recipeInstructions": "Prepare hot chocolate and stir in tequila and a pinch of chili powder. Top with whipped cream and chocolate shavings.",
+    "minTemp": null,
+    "maxTemp": "50°F",
+    "image": "default.png"
+  },
+  {
+    "cocktailName": "Mezcal Apple Cider",
+    "recipeIngredients": [
+      "2 oz Mezcal",
+      "6 oz Hot apple cider",
+      "1 tbsp Agave syrup",
+      "Cinnamon stick for garnish",
+      "Apple slice for garnish"
+    ],
+    "recipeInstructions": "In a mug, combine mezcal and hot apple cider. Stir in agave syrup. Garnish with a cinnamon stick and an apple slice.",
+    "minTemp": null,
+    "maxTemp": "50°F",
+    "image": "default.png"
+  },
+  {
+    "cocktailName": "Spiked Pumpkin Spice Latte",
+    "recipeIngredients": [
+      "1 oz Vodka",
+      "1 oz Coffee liqueur",
+      "2 oz Hot coffee",
+      "1 oz Pumpkin spice syrup",
+      "Whipped cream",
+      "Pumpkin pie spice for garnish"
+    ],
+    "recipeInstructions": "In a mug, combine vodka, coffee liqueur, hot coffee, and pumpkin spice syrup. Stir well. Top with whipped cream and a sprinkle of pumpkin pie spice.",
+    "minTemp": null,
+    "maxTemp": "50°F",
+    "image": "default.png"
+  },
+  {
+    "cocktailName": "Hot Tequila Toddy",
+    "recipeIngredients": [
+      "1 1/2 oz Tequila",
+      "1 tbsp Honey",
+      "2 tsp Lemon juice",
+      "1 cup Hot water",
+      "Cinnamon stick for garnish",
+      "Lemon slice for garnish"
+    ],
+    "recipeInstructions": "Combine tequila, honey, and lemon juice in a mug. Add hot water and stir until the honey is dissolved. Garnish with a lemon slice and a cinnamon stick.",
+    "minTemp": null,
+    "maxTemp": "50°F",
+    "image": "default.png"
+  },
+  {
+    "cocktailName": "Mezcal Hot Chocolate",
+    "recipeIngredients": [
+      "1 1/2 oz Mezcal",
+      "1 cup Hot chocolate",
+      "Pinch of cayenne pepper",
+      "Whipped cream",
+      "Cocoa powder for garnish"
+    ],
+    "recipeInstructions": "Prepare hot chocolate and mix in mezcal and a pinch of cayenne pepper. Top with whipped cream and a dusting of cocoa powder.",
+    "minTemp": null,
+    "maxTemp": "50°F",
+    "image": "default.png"
+  },
+  {
+    "cocktailName": "Winter Vodka Punch",
+    "recipeIngredients": [
+      "2 oz Vodka",
+      "4 oz Cranberry juice",
+      "2 oz Orange juice",
+      "1 oz Lemon juice",
+      "1 oz Simple syrup",
+      "Soda water",
+      "Orange slices for garnish",
+      "Cranberries for garnish"
+    ],
+    "recipeInstructions": "In a shaker, combine vodka, cranberry juice, orange juice, lemon juice, and simple syrup with ice. Shake well. Strain into a glass filled with ice. Top with soda water. Garnish with orange slices and cranberries,",
+    "minTemp": null,
+    "maxTemp": "50°F",
+    "image": "default.png"
+  },
+  {
+    "cocktailName": "Tequila Apple Warmer",
+    "recipeIngredients": [
+      "1 1/2 oz Tequila",
+      "6 oz Hot apple cider",
+      "1/2 oz Lemon juice",
+      "Cinnamon stick for garnish",
+      "Apple slice for garnish"
+    ],
+    "recipeInstructions": "In a mug, combine tequila, hot apple cider, and lemon juice. Stir well. Garnish with a cinnamon stick and an apple slice.",
+    "minTemp": null,
+    "maxTemp": "50°F",
+    "image": "default.png"
+  },
+  {
+    "cocktailName": "Smoky Mezcal Coffee",
+    "recipeIngredients": [
+      "1 1/2 oz Mezcal",
+      "1 cup Hot coffee",
+      "1 oz Chocolate syrup",
+      "Whipped cream",
+      "Cocoa powder for garnish"
+    ],
+    "recipeInstructions": "In a mug, combine mezcal, hot coffee, and chocolate syrup. Stir well. Top with whipped cream and a dusting of cocoa powder.",
+    "minTemp": null,
+    "maxTemp": "50°F",
+    "image": "default.png"
+  },
+  {
+    "cocktailName": "Vodka Mulled Wine",
+    "recipeIngredients": [
+      "1 oz Vodka",
+      "4 oz Red wine",
+      "1 oz Orange juice",
+      "1 tbsp Honey",
+      "2 Cinnamon sticks",
+      "4 Cloves",
+      "Orange slice for garnish"
+    ],
+    "recipeInstructions": "In a pot, combine vodka, red wine, orange juice, and honey. Add cinnamon sticks and cloves. Heat gently without boiling. Serve warm garnished with an orange slice.",
+    "minTemp": null,
+    "maxTemp": "50°F",
+    "image": "default.png"
   }
 ]
