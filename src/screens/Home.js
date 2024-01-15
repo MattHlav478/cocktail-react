@@ -75,7 +75,6 @@ export default function Home({
 
   return (
     <>
-      {/* <div className="flex justify-center bg-slate-800 font-sans"> */}
       <div className="absolute w-full h-screen flex flex-col">
         <SwitchTransition mode={"out-in"}>
           <CSSTransition
@@ -92,7 +91,6 @@ export default function Home({
           </CSSTransition>
         </SwitchTransition>
       </div>
-      {/* </div> */}
     </>
   );
 }

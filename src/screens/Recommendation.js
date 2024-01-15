@@ -81,7 +81,7 @@ export default function Recommendation({
   return (
     <div className="btn w-5/6 h-50 flex flex-col justify-center self-center p-2">
       <section className="flex flex-col items-center bg-white mb-4 p-6 rounded-md shadow-md">
-        <h2 className="text-xl font-bold mb-4">Current Weather</h2>
+        <h2 className="text-xl font-bold mb-2">Current Weather For:</h2>
         <h2 className="text-xl font-bold">{query}</h2>
         <p>
           Current temp: <span id="temp">{weather[0]}</span>
@@ -95,7 +95,7 @@ export default function Recommendation({
             {weather[1][0].toUpperCase() + weather[1].slice(1)}
           </span>
         </p>
-        <FontAwesomeIcon icon={icon} size="5x" color="purple" />
+        <FontAwesomeIcon icon={icon} size="5x" className="text-roller-4" />
       </section>
 
       <section className="flex w-full justify-center items-center mb-4 rounded-md shadow-md">
@@ -126,24 +126,26 @@ export default function Recommendation({
       </section>
       <section className="flex flex-col items-center bg-white mb-4 p-6 rounded-md shadow-md">
         <div className="text-xl font-bold mb-4">What You'll Need:</div>
-        <div>
+        <ul className="bullets">
           {cocktail.recipeIngredients.map((item, key) => (
-            <p>{item}</p>
+            <li>{item}</li>
           ))}
-        </div>
-        </section>
-        <section className="flex flex-col items-center bg-white mb-4 p-6 rounded-md shadow-md">
-        <div className="text-xl font-bold mb-4">What You'll Need:</div>
-        <div>{cocktail.recipeInstructions}</div>
-        <div className="flex flex-row justify-center">
-          <button
-            className="bg-purple-100 p-4 w-1/2 rounded-xl border-2 border-black"
-            onClick={() => setModalState("mainLogo")}
-          >
-            Another?
-          </button>
-        </div>
+        </ul>
       </section>
+      <section className="flex flex-col bg-white mb-4 p-6 rounded-md shadow-md">
+        <div className="text-center text-xl font-bold mb-4">
+          What You'll Do:
+        </div>
+        <div>{cocktail.recipeInstructions}</div>
+      </section>
+      <div className="flex flex-row justify-center">
+        <button
+          className="bg-purple-100 p-4 w-1/2 rounded-xl border-2 border-black"
+          onClick={() => setModalState("citySearch")}
+        >
+          Another?
+        </button>
+      </div>
     </div>
   );
 }

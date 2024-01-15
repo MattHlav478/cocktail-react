@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { citySearch } from "../../services/citySearch";
 import { getLatLon } from "../../services/weatherSearch";
 
@@ -11,6 +11,12 @@ export default function CitySearch({
   setModalState,
 }) {
   const [searchResults, setSearchResults] = useState(null);
+
+  useEffect(() => {
+    setQuery("");
+    setCitySelected(false);
+    setWeather("");
+  }, []);
 
   const handleSearch = async (query) => {
     setQuery(query);
@@ -34,7 +40,7 @@ export default function CitySearch({
     console.log(city, state);
     setQuery(`${city}, ${state}`, `${country}`);
     setCitySelected(true);
-    const weatherData = await getLatLon(city, state, country)
+    const weatherData = await getLatLon(city, state, country);
     setWeather(weatherData);
   };
 
