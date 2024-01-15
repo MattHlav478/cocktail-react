@@ -11,6 +11,7 @@ export default function CitySearch({
   setModalState,
 }) {
   const [searchResults, setSearchResults] = useState(null);
+  const [errorMessage, setErrorMessage] = useState(false);
 
   useEffect(() => {
     setQuery("");
@@ -33,6 +34,16 @@ export default function CitySearch({
       } catch (error) {
         console.log("Error fetching search results: ", error);
       }
+    }
+  };
+
+  const handleSwitchModal = () => {
+    if (citySelected) {
+      setModalState("liquorPrefs");
+    } else if (!citySelected) {
+      setErrorMessage(true);
+    } else {
+      console.log("Error: citySelected is not a boolean.");
     }
   };
 
@@ -64,11 +75,19 @@ export default function CitySearch({
             onClick={() => {
               setQuery("");
               setCitySelected(false);
+              setErrorMessage(false);
             }}
           >
             x
           </button>
         </span>
+        {
+          <div className="h-10 text-red-600">
+            {errorMessage && !citySelected
+              ? "Please select a valid city."
+              : ""}
+          </div>
+        }
         {searchResults && !citySelected && query.length > 0 && (
           <ul className="absolute flex flex-col w-2/3 bg-white border-2 border-solid">
             {searchResults
@@ -109,7 +128,7 @@ export default function CitySearch({
       <div className="flex flex-row justify-center">
         <button
           className="bg-purple-100 p-4 w-1/2 rounded-xl border-2 border-black"
-          onClick={() => setModalState("liquorPrefs")}
+          onClick={() => handleSwitchModal()}
         >
           Next
         </button>
