@@ -48,6 +48,7 @@ export default function Home({
         setCitySelected={setCitySelected}
         setWeather={setWeather}
         setModalState={setModalState}
+        setCocktail={setCocktail}
       />
     ),
     liquorPrefs: (

@@ -9,6 +9,7 @@ export default function CitySearch({
   setCitySelected,
   setWeather,
   setModalState,
+  setCocktail,
 }) {
   const [searchResults, setSearchResults] = useState(null);
   const [errorMessage, setErrorMessage] = useState(false);
@@ -17,6 +18,7 @@ export default function CitySearch({
     setQuery("");
     setCitySelected(false);
     setWeather("");
+    setCocktail(null);
   }, []);
 
   const handleSearch = async (query) => {
@@ -83,9 +85,7 @@ export default function CitySearch({
         </span>
         {
           <div className="h-10 text-red-600">
-            {errorMessage && !citySelected
-              ? "Please select a valid city."
-              : ""}
+            {errorMessage && !citySelected ? "Please select a valid city." : ""}
           </div>
         }
         {searchResults && !citySelected && query.length > 0 && (

@@ -22,8 +22,12 @@ export default function LiquorPrefs({
 
   async function handleLiquorPrefs() {
     let cocktailData = await drinkFinder(liquorPrefs, weather);
-    // console.log(cocktailData);
-    setCocktail(cocktailData);
+    console.log(cocktailData);
+    if (cocktailData === undefined) {
+      setCocktail(null);
+    } else {
+      setCocktail(cocktailData);
+    }
     setModalState("recommendation");
   }
 

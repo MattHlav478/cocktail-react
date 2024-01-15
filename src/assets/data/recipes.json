@@ -840,7 +840,7 @@
       "Cream"
     ],
     "recipeInstructions": "Pour Irish whiskey and brown sugar syrup into a mug. Fill with hot coffee. Gently float cream on top.",
-    "minTemp": null,
+    "minTemp": "-50°F",
     "maxTemp": "50°F",
     "image": "irish_coffee.png"
   },
@@ -916,9 +916,9 @@
       "Lemon slice for garnish"
     ],
     "recipeInstructions": "Combine whiskey, honey, and lemon juice in a mug. Top with hot water and stir until honey is dissolved. Garnish with a lemon slice and a cinnamon stick.",
-    "minTemp": null,
+    "minTemp": "-50°F",
     "maxTemp": "50°F",
-    "image": "default.png"
+    "image": "hot_toddy.png"
   },
   {
     "cocktailName": "Mulled Wine",
@@ -932,9 +932,9 @@
       "2 Star anise"
     ],
     "recipeInstructions": "Combine all ingredients in a large pot. Gently warm on low to medium heat (avoid boiling) for about 20 minutes. Serve warm with your favorite garnishes.",
-    "minTemp": null,
+    "minTemp": "-50°F",
     "maxTemp": "50°F",
-    "image": "default.png"
+    "image": "mulled_wine.png"
   },
   {
     "cocktailName": "Buttered Rum",
@@ -947,9 +947,9 @@
       "Boiling water"
     ],
     "recipeInstructions": "In a mug, combine butter, sugar, cinnamon, and nutmeg. Add the rum and top with boiling water. Stir until the butter is melted and ingredients are well mixed.",
-    "minTemp": null,
+    "minTemp": "-50°F",
     "maxTemp": "50°F",
-    "image": "default.png"
+    "image": "buttered_rum.png"
   },
   {
     "cocktailName": "Hot Buttered Apple Cider with Rum",
@@ -963,9 +963,9 @@
       "Ground cloves"
     ],
     "recipeInstructions": "In a saucepan, heat apple cider, butter, and brown sugar until hot. Pour into a mug and add rum. Stir with a cinnamon stick and sprinkle with nutmeg and cloves.",
-    "minTemp": null,
+    "minTemp": "-50°F",
     "maxTemp": "50°F",
-    "image": "default.png"
+    "image": "hot_buttered_apple_cider.png"
   },
   {
     "cocktailName": "Spiked Hot Chocolate",
@@ -976,9 +976,9 @@
       "Chocolate shavings"
     ],
     "recipeInstructions": "Prepare hot chocolate. Stir in peppermint schnapps or Baileys. Top with whipped cream and chocolate shavings.",
-    "minTemp": null,
+    "minTemp": "-50°F",
     "maxTemp": "50°F",
-    "image": "default.png"
+    "image": "spiked_hot_chocolate.png"
   },
   {
     "cocktailName": "Glogg",
@@ -994,9 +994,9 @@
       "1/2 cup Brandy or aquavit"
     ],
     "recipeInstructions": "In a pot, combine all ingredients except brandy. Heat gently without boiling for about 30 minutes. Just before serving, add brandy or aquavit. Serve warm in mugs, ensuring each mug gets a few raisins and almonds.",
-    "minTemp": null,
+    "minTemp": "-50°F",
     "maxTemp": "50°F",
-    "image": "default.png"
+    "image": "glogg.png"
   },
   {
     "cocktailName": "Wassail",
@@ -1015,9 +1015,9 @@
       "1 cup Dark rum (optional)"
     ],
     "recipeInstructions": "Combine all ingredients in a large pot. Bring to a simmer and let cook for 1-2 hours. Serve warm in mugs.",
-    "minTemp": null,
+    "minTemp": "-50°F",
     "maxTemp": "50°F",
-    "image": "default.png"
+    "image": "wassail.png"
   },
   {
     "cocktailName": "Hot Gin Punch",
@@ -1033,9 +1033,9 @@
       "Pinch of nutmeg"
     ],
     "recipeInstructions": "Combine all ingredients in a large pot. Heat gently for about 20 minutes. Serve in punch cups or mugs, garnished with slices of lemon and orange.",
-    "minTemp": null,
+    "minTemp": "-50°F",
     "maxTemp": "50°F",
-    "image": "default.png"
+    "image": "hot_gin_punch.png"
   },
   {
     "cocktailName": "Hot Spiced Cider",
@@ -1049,9 +1049,9 @@
       "1 Lemon peel, cut into strips"
     ],
     "recipeInstructions": "In a large pot, combine all ingredients. Slowly bring to a boil over low heat. Simmer for 10 minutes. Remove from heat and serve in mugs.",
-    "minTemp": null,
+    "minTemp": "-50°F",
     "maxTemp": "50°F",
-    "image": "default.png"
+    "image": "hot_spiced_cider.png"
   },
   {
     "cocktailName": "Vodka Hot Toddy",
@@ -1064,9 +1064,9 @@
       "Lemon slice for garnish"
     ],
     "recipeInstructions": "In a mug, combine vodka, honey, and lemon juice. Add hot water and stir until the honey is fully dissolved. Garnish with a lemon slice and a cinnamon stick.",
-    "minTemp": null,
+    "minTemp": "-50°F",
     "maxTemp": "50°F",
-    "image": "default.png"
+    "image": "vodka_hot_toddy.png"
   },
   {
     "cocktailName": "Tequila Hot Chocolate",
@@ -1078,9 +1078,9 @@
       "Chocolate shavings for garnish"
     ],
     "recipeInstructions": "Prepare hot chocolate and stir in tequila and a pinch of chili powder. Top with whipped cream and chocolate shavings.",
-    "minTemp": null,
+    "minTemp": "-50°F",
     "maxTemp": "50°F",
-    "image": "default.png"
+    "image": "tequila_hot_chocolate.png"
   },
   {
     "cocktailName": "Mezcal Apple Cider",
@@ -1092,9 +1092,9 @@
       "Apple slice for garnish"
     ],
     "recipeInstructions": "In a mug, combine mezcal and hot apple cider. Stir in agave syrup. Garnish with a cinnamon stick and an apple slice.",
-    "minTemp": null,
+    "minTemp": "-50°F",
     "maxTemp": "50°F",
-    "image": "default.png"
+    "image": "mezcal_apple_cider.png"
   },
   {
     "cocktailName": "Spiked Pumpkin Spice Latte",
@@ -1107,9 +1107,9 @@
       "Pumpkin pie spice for garnish"
     ],
     "recipeInstructions": "In a mug, combine vodka, coffee liqueur, hot coffee, and pumpkin spice syrup. Stir well. Top with whipped cream and a sprinkle of pumpkin pie spice.",
-    "minTemp": null,
+    "minTemp": "-50°F",
     "maxTemp": "50°F",
-    "image": "default.png"
+    "image": "spiked_pumpkin_spice_latte.png"
   },
   {
     "cocktailName": "Hot Tequila Toddy",
@@ -1122,9 +1122,9 @@
       "Lemon slice for garnish"
     ],
     "recipeInstructions": "Combine tequila, honey, and lemon juice in a mug. Add hot water and stir until the honey is dissolved. Garnish with a lemon slice and a cinnamon stick.",
-    "minTemp": null,
+    "minTemp": "-50°F",
     "maxTemp": "50°F",
-    "image": "default.png"
+    "image": "hot_tequila_toddy.png"
   },
   {
     "cocktailName": "Mezcal Hot Chocolate",
@@ -1136,9 +1136,9 @@
       "Cocoa powder for garnish"
     ],
     "recipeInstructions": "Prepare hot chocolate and mix in mezcal and a pinch of cayenne pepper. Top with whipped cream and a dusting of cocoa powder.",
-    "minTemp": null,
+    "minTemp": "-50°F",
     "maxTemp": "50°F",
-    "image": "default.png"
+    "image": "mezcal_hot_chocolate.png"
   },
   {
     "cocktailName": "Winter Vodka Punch",
@@ -1153,9 +1153,9 @@
       "Cranberries for garnish"
     ],
     "recipeInstructions": "In a shaker, combine vodka, cranberry juice, orange juice, lemon juice, and simple syrup with ice. Shake well. Strain into a glass filled with ice. Top with soda water. Garnish with orange slices and cranberries,",
-    "minTemp": null,
+    "minTemp": "-50°F",
     "maxTemp": "50°F",
-    "image": "default.png"
+    "image": "winter_vodka_punch.png"
   },
   {
     "cocktailName": "Tequila Apple Warmer",
@@ -1167,9 +1167,9 @@
       "Apple slice for garnish"
     ],
     "recipeInstructions": "In a mug, combine tequila, hot apple cider, and lemon juice. Stir well. Garnish with a cinnamon stick and an apple slice.",
-    "minTemp": null,
+    "minTemp": "-50°F",
     "maxTemp": "50°F",
-    "image": "default.png"
+    "image": "tequila_apple_warmer.png"
   },
   {
     "cocktailName": "Smoky Mezcal Coffee",
@@ -1181,9 +1181,9 @@
       "Cocoa powder for garnish"
     ],
     "recipeInstructions": "In a mug, combine mezcal, hot coffee, and chocolate syrup. Stir well. Top with whipped cream and a dusting of cocoa powder.",
-    "minTemp": null,
+    "minTemp": "-50°F",
     "maxTemp": "50°F",
-    "image": "default.png"
+    "image": "smoky_mezcal_coffee.png"
   },
   {
     "cocktailName": "Vodka Mulled Wine",
@@ -1197,8 +1197,8 @@
       "Orange slice for garnish"
     ],
     "recipeInstructions": "In a pot, combine vodka, red wine, orange juice, and honey. Add cinnamon sticks and cloves. Heat gently without boiling. Serve warm garnished with an orange slice.",
-    "minTemp": null,
+    "minTemp": "-50°F",
     "maxTemp": "50°F",
-    "image": "default.png"
+    "image": "vodka_mulled_wine.png"
   }
 ]

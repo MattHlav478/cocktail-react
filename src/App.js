@@ -7,23 +7,14 @@ import Header from "./screens/components/Header";
 function App() {
   const [citySelected, setCitySelected] = useState(false);
   const [weather, setWeather] = useState("");
-  const [cocktail, setCocktail] = useState({
-    cocktailName: "Default Cocktail",
-    recipeIngredients: [
-      "ingredient 1",
-      "ingredient 2",
-      "ingredient 3",
-      "ingredient 4",
-    ],
-    recipeInstructions:
-      "Here are some default instructions.",
-    minTemp: "75°F",
-    maxTemp: "100°F",
-    image: "default.png",
-  });
+  const [cocktail, setCocktail] = useState(null);
 
   useEffect(() => {
-    console.log(cocktail.cocktailName);
+    if (cocktail === null) {
+      console.log("cocktail is null");
+    } else {
+      console.log(cocktail.cocktailName);
+    }
   }, [cocktail]);
 
   return (
