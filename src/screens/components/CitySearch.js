@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { citySearch } from "../../services/citySearch";
 import { getLatLon } from "../../services/weatherSearch";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 export default function CitySearch({
   query,
@@ -73,14 +75,14 @@ export default function CitySearch({
             onChange={(e) => handleSearch(e.target.value)}
           />
           <button
-            className="flex items-center justify-center w-7 h-7 text-center border-2"
+            className="flex items-center justify-center w-7 h-7 text-center"
             onClick={() => {
               setQuery("");
               setCitySelected(false);
               setErrorMessage(false);
             }}
           >
-            x
+            <FontAwesomeIcon icon={faXmark} size="2x" className="text-roller-4" />
           </button>
         </span>
         {

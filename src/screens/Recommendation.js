@@ -13,6 +13,7 @@ import {
   faCloudBolt,
   faSnowflake,
   faSmog,
+  faQuestion,
 } from "@fortawesome/free-solid-svg-icons";
 
 const useWeatherIcon = (weatherCode) => {
@@ -63,6 +64,9 @@ const useWeatherIcon = (weatherCode) => {
         setIcon(faCloudBolt);
         break;
       case "13d":
+        setIcon(faSnowflake);
+        break;
+
       case "13n":
         setIcon(faSnowflake);
         break;
@@ -73,7 +77,7 @@ const useWeatherIcon = (weatherCode) => {
         setIcon(faSmog);
         break;
       default:
-        setIcon(null);
+        setIcon(faQuestion);
     }
   }, [weatherCode]);
 
@@ -144,7 +148,7 @@ export default function Recommendation({
             <div className="text-xl font-bold mb-4">What You'll Need:</div>
             <ul className="bullets">
               {cocktail.recipeIngredients.map((item, key) => (
-                <li>{item}</li>
+                <li key={key}>{item}</li>
               ))}
             </ul>
           </section>

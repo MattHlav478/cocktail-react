@@ -1,8 +1,31 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
-export default function Header() {
+export default function Header({ modalState, setModalState }) {
+  const handleBackNav = () => {
+    console.log("hello");
+    if (modalState == "recommendation") {
+      setModalState("liquorPrefs");
+    } else if (modalState == "liquorPrefs") {
+      setModalState("citySearch");
+    }
+  };
+
   return (
-    <header className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white py-4 shadow-md">
+    <header className="h-16 flex flex-row items-center justify-center text-white">
+      {modalState == "citySearch" ? null : (
+        <button
+        onClick={handleBackNav}
+        >
+          <FontAwesomeIcon
+            icon={faCircleChevronLeft}
+            size="2x"
+            className="absolute left-0 top-4 ml-4 text-white"
+          />
+        </button>
+      )}
+
       <h1 className="text-center text-2xl font-bold">Daily Cocktaily</h1>
     </header>
   );

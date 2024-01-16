@@ -5,9 +5,10 @@ import MainLogo from "./components/MainLogo";
 import LiquorPrefs from "./components/LiquorPrefs";
 import CitySearch from "./components/CitySearch";
 import Recommendation from "./Recommendation";
-import Recipe from "./Recipe";
 
 export default function Home({
+  modalState,
+  setModalState,
   citySelected,
   setCitySelected,
   weather,
@@ -15,7 +16,7 @@ export default function Home({
   cocktail,
   setCocktail,
 }) {
-  const [modalState, setModalState] = useState("citySearch");
+  // const [modalState, setModalState] = useState("citySearch");
   const [query, setQuery] = useState("");
   const mainLogoRef = useRef(null);
   const cityRef = useRef(null);
@@ -32,8 +33,6 @@ export default function Home({
     nodeRef = liquorRef;
   } else if (modalState === "recommendation") {
     nodeRef = recommendationRef;
-  } else if (modalState === "recipe") {
-    nodeRef = recipeRef;
   } else {
     console.log("error: modalState doesn't match");
   }
@@ -67,12 +66,7 @@ export default function Home({
         setModalState={setModalState}
       />
     ),
-    recipe: <Recipe cocktail={cocktail} />,
   };
-
-  useEffect(() => {
-    console.log(`modalState: ${modalState}`);
-  }, [modalState]);
 
   return (
     <>
