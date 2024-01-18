@@ -26,7 +26,7 @@ export default function Header({ modalState, setModalState }) {
         </button>
       )}
 
-      <h1 className="text-center text-2xl font-bold">Daily Cocktaily</h1>
+      <h1 className="title font-acidbath text-center text-5xl">Cocktaily Daily</h1>
     </header>
   );
 }

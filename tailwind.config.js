@@ -2,6 +2,10 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    fontFamily: {
+      poppins: ["Poppins", "sans-serif"],
+      acidbath: ["Acidbath", "sans-serif"]
+    },
     extend: {
       colors: {
         transparent: "transparent",
@@ -13,7 +17,7 @@ module.exports = {
           4: "#39C0ED",
         },
       },
-    },
+          },
   },
   plugins: [],
 };

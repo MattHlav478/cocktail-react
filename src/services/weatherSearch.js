@@ -6,7 +6,10 @@ export const getLatLon = async (city, state, country) => {
 
   let weatherResponse;
 
-  var geocodeApi = `https://api.openweathermap.org/geo/1.0/direct?q=${city},${state},${country}&appid=${process.env.REACT_APP_OPENWEATHER_API}`;
+  var cityEncoded = encodeURIComponent(city);
+  var stateEncoded = encodeURIComponent(state);
+  var countryEncoded = encodeURIComponent(country);
+  var geocodeApi = `https://api.openweathermap.org/geo/1.0/direct?q=${cityEncoded},${stateEncoded},${countryEncoded}&appid=${process.env.REACT_APP_OPENWEATHER_API}`;
   try {
     const response = await fetch(geocodeApi);
     if (!response.ok) {
@@ -19,7 +22,7 @@ export const getLatLon = async (city, state, country) => {
     let locationCountry = data[0].country;
     let locationLat = data[0].lat;
     let locationLon = data[0].lon;
-  
+
     // after getting the lat and lon this function runs a fetch request to get the actual weather
     weatherResponse = await getWeather(
       locationName,
@@ -31,7 +34,7 @@ export const getLatLon = async (city, state, country) => {
   } catch (error) {
     console.log(error);
   }
-    return weatherResponse;
+  return weatherResponse;
 };
 
 export function getWeather(
@@ -63,5 +66,4 @@ export function getWeather(
     .catch(function (error) {
       console.log(error);
     });
-
 }
