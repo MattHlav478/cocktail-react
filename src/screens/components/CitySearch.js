@@ -60,7 +60,7 @@ export default function CitySearch({
   };
 
   return (
-    <div className="btn w-3/4 flex flex-col justify-center self-center mt-24 p-2 bg-white shadow-xl rounded-xl ">
+    <div className="btn card-shadow w-3/4 flex flex-col justify-center self-center mt-24 p-2 bg-white shadow-xl rounded-xl">
       <h1 className="text-xl text-center mb-2 font-semibold">
         Where are we mixing things up?
       </h1>

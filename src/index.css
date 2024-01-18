@@ -26,11 +26,19 @@ code {
 }
 
 .title {
-  text-shadow: 0.05em 0.05em #09D79A,  0.1em 0.1em #D0342C, 0.13em 0.13em #DAA520
+  text-shadow: 0.03em 0.03em #1e293b, 0.05em 0.05em #09d79a,
+    0.07em 0.07em #1e293b, 0.09em 0.09em #d0342c, 0.11em 0.11em #1e293b,
+    0.13em 0.13em #daa520;
 }
 
 .title-simple {
-  text-shadow: 0.05em 0.05em #09D79A,  0.1em 0.1em #D0342C, 0.13em 0.13em #DAA520
+  text-shadow: 0.05em 0.05em #09d79a, 0.1em 0.1em #d0342c, 0.13em 0.13em #daa520;
+}
+
+.card-shadow {
+  box-shadow: 0.2em 0.2em #1e293b, 0.5em 0.5em #09d79a,
+    0.7em 0.7em #1e293b, 1.0em 1.0em #d0342c, 1.2em 1.2em #1e293b,
+    1.5em 1.5em #daa520;;
 }
 
 ol {
