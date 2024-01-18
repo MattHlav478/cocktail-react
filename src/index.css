@@ -27,7 +27,10 @@ code {
 
 .title {
   text-shadow: 0.05em 0.05em #09D79A,  0.1em 0.1em #D0342C, 0.13em 0.13em #DAA520
-  
+}
+
+.title-simple {
+  text-shadow: 0.05em 0.05em #09D79A,  0.1em 0.1em #D0342C, 0.13em 0.13em #DAA520
 }
 
 ol {
