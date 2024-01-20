@@ -32,25 +32,26 @@ export default function LiquorPrefs({
   }
 
   return (
-    <div className="btn w-3/4 h-50 flex flex-col justify-center self-center mt-24 p-2 bg-white shadow-xl rounded-xl">
+    <div className="btn card-shadow w-3/4 flex flex-col justify-center self-center mt-24 p-2 text-white border-solid border-4 border-white shadow-xl rounded-xl">
+      {/* <div className="btn card-shadow w-3/4 h-50 flex flex-col justify-center self-center mt-24 p-2 bg-white shadow-xl rounded-xl"> */}
       <h2 className="text-lg font-bold mb-4 text-center">
         Liquor Preferences?
       </h2>
 
-      <div className="modal-body grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className="flex items-center">
+      <div className="flex flex-col justify-center self-center sm:w-1/2">
+        <div className="flex items-center mb-4">
           <ToggleSwitch id={"gin"} onToggle={() => handleToggle("gin")} />
           <label htmlFor="gin" className="text-md pl-4">
             Gin
           </label>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center mb-4">
           <ToggleSwitch id={"rum"} onToggle={() => handleToggle("rum")} />
           <label htmlFor="rum" className="text-md pl-4">
             Rum
           </label>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center mb-4">
           <ToggleSwitch
             id={"tequila"}
             onToggle={() => handleToggle("tequila")}
@@ -59,13 +60,13 @@ export default function LiquorPrefs({
             Tequila
           </label>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center mb-4">
           <ToggleSwitch id={"mezcal"} onToggle={() => handleToggle("mezcal")} />
           <label htmlFor="mezcal" className="text-md pl-4">
             Mezcal
           </label>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center mb-4">
           <ToggleSwitch
             id={"whiskey"}
             onToggle={() => handleToggle("whiskey")}
@@ -74,13 +75,13 @@ export default function LiquorPrefs({
             American Whiskey
           </label>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center mb-4">
           <ToggleSwitch id={"scotch"} onToggle={() => handleToggle("scotch")} />
           <label htmlFor="scotch" className="text-md pl-4">
             Scotch Whisky
           </label>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center mb-4">
           <ToggleSwitch id={"vodka"} onToggle={() => handleToggle("vodka")} />
           <label htmlFor="vodka" className="text-md pl-4">
             Vodka
@@ -88,7 +89,7 @@ export default function LiquorPrefs({
         </div>
         <div className="flex flex-row justify-center">
           <button
-            className="bg-purple-100 p-4 w-1/2 rounded-xl border-2 border-black"
+          className="p-2 w-24 text-center rounded-xl border-2 border-roller-3"
             onClick={() => handleLiquorPrefs()}
           >
             Next

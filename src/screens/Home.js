@@ -22,7 +22,6 @@ export default function Home({
   const cityRef = useRef(null);
   const liquorRef = useRef(null);
   const recommendationRef = useRef(null);
-  const recipeRef = useRef(null);
   let nodeRef = useRef(null);
 
   if (modalState === "mainLogo") {
@@ -70,7 +69,7 @@ export default function Home({
 
   return (
     <>
-      <div className="absolute w-full h-screen flex flex-col">
+      <div className="font-poppins w-full flex flex-col">
         <SwitchTransition mode={"out-in"}>
           <CSSTransition
             key={modalState} // Use the state to generate a unique key
@@ -80,7 +79,7 @@ export default function Home({
             }}
             classNames="fade"
           >
-            <div ref={nodeRef} className="flex justify-center">
+            <div ref={nodeRef} className="flex justify-center h-full bg-slate-800">
               {componentMap[modalState]}
             </div>
           </CSSTransition>

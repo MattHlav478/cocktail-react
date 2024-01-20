@@ -3,6 +3,7 @@ import { citySearch } from "../../services/citySearch";
 import { getLatLon } from "../../services/weatherSearch";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import ToggleSwitch from "./subcomponents/ToggleSwitch";
 
 export default function CitySearch({
   query,
@@ -60,18 +61,19 @@ export default function CitySearch({
   };
 
   return (
-    <div className="btn card-shadow w-3/4 flex flex-col justify-center self-center mt-24 p-2 bg-white shadow-xl rounded-xl">
-      <h1 className="text-xl text-center mb-2 font-semibold">
+    <div className="btn card-shadow w-3/4 md:w-1/2 h-full bg-slate-800 flex flex-col justify-center items-center mt-24 p-2 text-white border-solid border-4 border-white shadow-xl rounded-xl">
+      {/* <div className="btn card-shadow w-3/4 flex flex-col justify-center self-center mt-24 p-2 bg-white shadow-xl rounded-xl"> */}
+      <h1 className="mb-2 w-3/4 sm:w-full text-center text-xl font-semibold">
         Where are we mixing things up?
       </h1>
       <div className="text-center">
-        <span className=" flex flex-row justify-between border-2 p-2 mb-4 rounded-md w-full md:w-2/3 lg:w-1/2 mx-auto shadow-sm">
+        <span className="flex flex-row md:w-96 justify-between border-2 p-2 mb-4 rounded-lg">
           <input
             type="text"
             placeholder="City, State"
             id="search-city"
             value={query}
-            className="focus:outline-none w-full mr-2"
+            className="bg-transparent focus:outline-none mr-2"
             onChange={(e) => handleSearch(e.target.value)}
           />
           <button
@@ -82,16 +84,15 @@ export default function CitySearch({
               setErrorMessage(false);
             }}
           >
-            <FontAwesomeIcon icon={faXmark} size="2x" className="text-roller-4" />
+            <FontAwesomeIcon
+              icon={faXmark}
+              size="2x"
+              className="text-roller-4"
+            />
           </button>
         </span>
-        {
-          <div className="h-10 text-red-600">
-            {errorMessage && !citySelected ? "Please select a valid city." : ""}
-          </div>
-        }
         {searchResults && !citySelected && query.length > 0 && (
-          <ul className="absolute flex flex-col w-2/3 bg-white border-2 border-solid">
+          <ul className="absolute flex flex-col w-1/2 bg-white text-black border-2 border-solid rounded-lg">
             {searchResults
               .reduce((unique, result) => {
                 if (
@@ -125,11 +126,16 @@ export default function CitySearch({
                 </li>
               ))}
           </ul>
-        )}{" "}
+        )}
+        {
+          <div className="h-10 text-red-600">
+            {errorMessage && !citySelected ? "Please select a valid city." : ""}
+          </div>
+        }{" "}
       </div>
       <div className="flex flex-row justify-center">
         <button
-          className="bg-purple-100 p-4 w-1/2 rounded-xl border-2 border-black"
+          className="p-2 w-24 text-center rounded-xl border-2 border-roller-3"
           onClick={() => handleSwitchModal()}
         >
           Next

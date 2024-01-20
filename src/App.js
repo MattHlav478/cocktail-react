@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./App.css";
-import { Home, Recipe, Recommendation } from "./screens";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Home } from "./screens";
 import Header from "./screens/components/Header";
 
 function App() {
@@ -10,16 +9,8 @@ function App() {
   const [weather, setWeather] = useState("");
   const [cocktail, setCocktail] = useState(null);
 
-  // useEffect(() => {
-  //   if (cocktail === null) {
-  //     console.log("cocktail is null");
-  //   } else {
-  //     console.log(cocktail.cocktailName);
-  //   }
-  // }, [cocktail]);
-
   return (
-    <>
+    <div className="bg-slate-800">
       <Header modalState={modalState} setModalState={setModalState} />
       <Home
         modalState={modalState}
@@ -31,7 +22,7 @@ function App() {
         cocktail={cocktail}
         setCocktail={setCocktail}
       />
-    </>
+    </div>
   );
 }
 

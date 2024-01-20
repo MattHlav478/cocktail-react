@@ -4,10 +4,10 @@ module.exports = {
   theme: {
     fontFamily: {
       poppins: ["Poppins", "sans-serif"],
-      acidbath: ["Acidbath", "sans-serif"]
+      acidbath: ["Acidbath", "sans-serif"],
     },
     extend: {
-      colors: {
+     colors: {
         transparent: "transparent",
         current: "currentColor",
         roller: {
@@ -17,7 +17,7 @@ module.exports = {
           4: "#39C0ED",
         },
       },
-          },
+    },
   },
   plugins: [],
 };

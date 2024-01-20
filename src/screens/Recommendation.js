@@ -160,7 +160,7 @@ export default function Recommendation({
           </section>
           <div className="flex flex-row justify-center">
             <button
-              className="bg-purple-100 p-4 w-1/2 rounded-xl border-2 border-black"
+              className="p-2 w-32 text-white text-center rounded-xl border-2 border-roller-3"
               onClick={() => setModalState("citySearch")}
             >
               Another?
@@ -175,7 +175,7 @@ export default function Recommendation({
           </div>
           <div className="flex flex-row justify-center">
             <button
-              className="bg-purple-100 p-4 w-1/2 rounded-xl border-2 border-black"
+              className="p-2 w-48 text-center rounded-xl border-2 border-roller-3"
               onClick={() => setModalState("citySearch")}
             >
               Try again?
