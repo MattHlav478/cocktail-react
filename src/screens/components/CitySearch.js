@@ -65,8 +65,8 @@ export default function CitySearch({
       <h1 className="mb-2 w-3/4 sm:w-full text-center text-xl font-semibold">
         Where are we mixing things up?
       </h1>
-      <div className="text-center">
-        <span className="flex flex-row justify-between border-2 p-2 mb-4 rounded-lg">
+      <div className="text-center w-full md:w-96 px-4">
+        <span className="flex justify-between border-2 p-2 mb-4 rounded-lg">
           <input
             type="text"
             placeholder="City, State"
