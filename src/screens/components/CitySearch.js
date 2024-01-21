@@ -76,7 +76,7 @@ export default function CitySearch({
             onChange={(e) => handleSearch(e.target.value)}
           />
           <button
-            className="flex items-center justify-center w-7 h-7 text-center"
+            className="flex items-center justify-center text-center"
             onClick={() => {
               setQuery("");
               setCitySelected(false);
