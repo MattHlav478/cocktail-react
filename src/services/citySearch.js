@@ -5,18 +5,19 @@ export const citySearch = async (query) => {
     );
     const data = await response.json();
     console.log(data);
-    const cities = await data.results.map((city) => {
-      return {
-        city: city.components.city,
-        state: city.components.state,
-        country: city.components.country,
-        // population: city.annotations.population,
-      };
-    });
-    // .filter((city) => !(city && (city.city.match(/-/g) || []).length >= 2))
-    // .filter(
-    //   (state) => !(state && (state.state.match(/-/g) || []).length >= 2)
-    // )
+    const cities = await data.results
+      .map((city) => {
+        return {
+          city: city.components.city,
+          state: city.components.state,
+          country: city.components.country,
+          // population: city.annotations.population,
+        };
+      })
+      // .filter((city) => !(city && (city.city.match(/-/g) || []).length >= 2))
+      // .filter(
+      //   (state) => !(state && (state.state.match(/-/g) || []).length >= 2)
+      // );
     // // .sort((a, b) => b.population - a.population);
     return cities;
   } catch (error) {
