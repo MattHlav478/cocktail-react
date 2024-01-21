@@ -15,7 +15,7 @@ export default function CitySearch({
 }) {
   const [searchResults, setSearchResults] = useState(null);
   const [errorMessage, setErrorMessage] = useState(false);
-  
+
   useEffect(() => {
     setQuery("");
     setCitySelected(false);
@@ -66,7 +66,7 @@ export default function CitySearch({
         Where are we mixing things up?
       </h1>
       <div className="text-center">
-        <span className="flex flex-row w-full md:w-96 justify-between border-2 p-2 mb-4 rounded-lg">
+        <span className="flex flex-row justify-between border-2 p-2 mb-4 rounded-lg">
           <input
             type="text"
             placeholder="City, State"
