@@ -1,27 +1,33 @@
 export const citySearch = async (query) => {
   try {
     const response = await fetch(
-      `https://api.opencagedata.com/geocode/v1/json?q=${query}&address_only=1&key=${process.env.REACT_APP_OPEN_CAGE_API}`
+      `https://api.maptiler.com/geocoding/${query}.json?language=en&types=municipality%2Cmunicipal_district%2Clocality&autocomplete=false&fuzzyMatch=true&limit=10&key=${process.env.REACT_APP_MAPTILER_API}`
     );
     const data = await response.json();
     console.log(data);
-    const cities = await data.results
+    const cities = await data.features
       .map((city) => {
-        if ((city.components._type = "city")) {
-          return {
-            city: city.components.city || null,
-            state: city.components.state,
-            country: city.components.country,
-            // population: city.annotations.population,
-          };
+        let inputString = city.place_name_en
+        function splitString(inputString) {
+          let parts = inputString.split(",").map(function (part) {
+            return part.trim();
+          });
+          return parts;
         }
+        let parts = splitString(inputString)
+        return {
+          city: parts[0],
+          state: parts[1],
+          country: parts[2],
+          // population: city.annotations.population,
+        };
       })
-      .filter((city) => city && city.city)
-      .filter((city) => !(city && (city.city.match(/-/g) || []).length >= 2))
-      .filter(
-        (state) => !(state && (state.state.match(/-/g) || []).length >= 2)
-      );
-    // // .sort((a, b) => b.population - a.population);
+      // .filter((city) => city && city.city)
+      // .filter((city) => !(city && (city.city.match(/-/g) || []).length >= 2))
+      // .filter(
+      //   (state) => !(state && (state.state.match(/-/g) || []).length >= 2)
+      // );
+    // .sort((a, b) => b.population - a.population);
     return cities;
   } catch (error) {
     console.group("Error fetching city data: ", error);
