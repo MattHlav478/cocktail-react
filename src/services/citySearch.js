@@ -1,23 +1,26 @@
 export const citySearch = async (query) => {
   try {
     const response = await fetch(
-      `https://api.opencagedata.com/geocode/v1/json?q=${query}&key=${process.env.REACT_APP_OPEN_CAGE_API}`
+      `https://api.opencagedata.com/geocode/v1/json?q=${query}&address_only=1&key=${process.env.REACT_APP_OPEN_CAGE_API}`
     );
     const data = await response.json();
     console.log(data);
     const cities = await data.results
       .map((city) => {
-        return {
-          city: city.components.city,
-          state: city.components.state,
-          country: city.components.country,
-          // population: city.annotations.population,
-        };
+        if ((city.components._type = "city")) {
+          return {
+            city: city.components.city || null,
+            state: city.components.state,
+            country: city.components.country,
+            // population: city.annotations.population,
+          };
+        }
       })
-      // .filter((city) => !(city && (city.city.match(/-/g) || []).length >= 2))
-      // .filter(
-      //   (state) => !(state && (state.state.match(/-/g) || []).length >= 2)
-      // );
+      .filter((city) => city && city.city)
+      .filter((city) => !(city && (city.city.match(/-/g) || []).length >= 2))
+      .filter(
+        (state) => !(state && (state.state.match(/-/g) || []).length >= 2)
+      );
     // // .sort((a, b) => b.population - a.population);
     return cities;
   } catch (error) {

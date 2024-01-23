@@ -21,7 +21,7 @@ export default function Header({ modalState, setModalState }) {
           <FontAwesomeIcon
             icon={faCircleChevronLeft}
             size="2x"
-            className="absolute left-0 top-4 ml-4 text-white"
+            className="absolute left-0 top-2 ml-2 text-white"
           />
         </button>
       )}

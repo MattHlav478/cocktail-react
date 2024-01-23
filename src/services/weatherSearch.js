@@ -10,6 +10,7 @@ export const getLatLon = async (city, state, country) => {
   var stateEncoded = encodeURIComponent(state);
   var countryEncoded = encodeURIComponent(country);
   var geocodeApi = `https://api.openweathermap.org/geo/1.0/direct?q=${cityEncoded},${stateEncoded},${countryEncoded}&appid=${process.env.REACT_APP_OPENWEATHER_API}`;
+  console.log(geocodeApi)
   try {
     const response = await fetch(geocodeApi);
     if (!response.ok) {

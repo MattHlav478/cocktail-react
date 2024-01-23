@@ -66,7 +66,7 @@ export default function CitySearch({
         Where are we mixing things up?
       </h1>
       <div className="text-center w-full md:w-96 px-4">
-        <span className="flex justify-between border-2 p-2 mb-4 rounded-lg">
+        <div className="flex justify-between border-2 p-2 mb-4 rounded-lg">
           <input
             type="text"
             placeholder="City, State"
@@ -89,7 +89,7 @@ export default function CitySearch({
               className="text-roller-4"
             />
           </button>
-        </span>
+        </div>
         {searchResults && !citySelected && query.length > 0 && (
           <ul className="absolute flex flex-col w-1/2 bg-white text-black border-2 border-solid rounded-lg">
             {searchResults
