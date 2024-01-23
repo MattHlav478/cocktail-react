@@ -65,8 +65,8 @@ export default function CitySearch({
       <h1 className="mb-2 text-center text-xl font-semibold">
         Where are we mixing things up?
       </h1>
-      <div className="text-center px-4">
-        <div className="flex border-2 p-2 mb-4 rounded-lg">
+      <div className="text-center px-2">
+        <div className="flex justify-between border-2 py-2 px-2 mb-4 rounded-lg">
           <input
             type="text"
             placeholder="City, State"
@@ -76,7 +76,7 @@ export default function CitySearch({
             onChange={(e) => handleSearch(e.target.value)}
           />
           <button
-            className="relative flex items-center justify-center text-center"
+            className="flex items-center justify-center text-center"
             onClick={() => {
               setQuery("");
               setCitySelected(false);
