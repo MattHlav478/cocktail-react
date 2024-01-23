@@ -60,13 +60,13 @@ export default function CitySearch({
   };
 
   return (
-    <div className="btn card-shadow h-full bg-slate-800 flex flex-col justify-center items-center mt-24 p-2 text-white border-solid border-4 border-white shadow-xl rounded-xl">
+    <div className="btn card-shadow h-full flex flex-col justify-center items-center mt-24 p-2 bg-slate-800 text-white border-solid border-4 border-white shadow-xl rounded-xl">
       {/* <div className="btn card-shadow w-3/4 flex flex-col justify-center self-center mt-24 p-2 bg-white shadow-xl rounded-xl"> */}
       <h1 className="mb-2 text-center text-xl font-semibold">
         Where are we mixing things up?
       </h1>
       <div className="text-center px-4">
-        <div className="flex justify-between border-2 p-2 mb-4 rounded-lg">
+        <div className="flex border-2 p-2 mb-4 rounded-lg">
           <input
             type="text"
             placeholder="City, State"
@@ -91,7 +91,7 @@ export default function CitySearch({
           </button>
         </div>
         {searchResults && !citySelected && query.length > 0 && (
-          <ul className="absolute flex flex-col w-1/2 bg-white text-black border-2 border-solid rounded-lg">
+          <ul className="absolute flex flex-col bg-white text-black border-2 border-solid rounded-lg">
             {searchResults
               .reduce((unique, result) => {
                 if (
