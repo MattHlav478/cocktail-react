@@ -14,10 +14,8 @@ export default function Header({ modalState, setModalState }) {
 
   return (
     <header className="h-16 flex flex-row items-center justify-center text-white">
-      {modalState == "citySearch" ? null : (
-        <button
-        onClick={handleBackNav}
-        >
+      {modalState == "citySearch" || modalState == "recommendations" ? null : (
+        <button onClick={handleBackNav}>
           <FontAwesomeIcon
             icon={faCircleChevronLeft}
             size="2x"
@@ -26,7 +24,9 @@ export default function Header({ modalState, setModalState }) {
         </button>
       )}
 
-      <h1 className="title font-acidbath text-center text-5xl sm:text-6xl">Cocktaily Daily</h1>
+      <h1 className="title font-acidbath text-center text-4xl sm:text-6xl">
+        Cocktaily Daily
+      </h1>
     </header>
   );
 }

@@ -60,12 +60,12 @@ export default function CitySearch({
   };
 
   return (
-    <div className="btn card-shadow w-3/4 md:w-1/2 h-full bg-slate-800 flex flex-col justify-center items-center mt-24 p-2 text-white border-solid border-4 border-white shadow-xl rounded-xl">
+    <div className="btn card-shadow h-full bg-slate-800 flex flex-col justify-center items-center mt-24 p-2 text-white border-solid border-4 border-white shadow-xl rounded-xl">
       {/* <div className="btn card-shadow w-3/4 flex flex-col justify-center self-center mt-24 p-2 bg-white shadow-xl rounded-xl"> */}
-      <h1 className="mb-2 w-3/4 sm:w-full text-center text-xl font-semibold">
+      <h1 className="mb-2 text-center text-xl font-semibold">
         Where are we mixing things up?
       </h1>
-      <div className="text-center w-full md:w-96 px-4">
+      <div className="text-center px-4">
         <div className="flex justify-between border-2 p-2 mb-4 rounded-lg">
           <input
             type="text"
