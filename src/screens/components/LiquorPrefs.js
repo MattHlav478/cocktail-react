@@ -32,7 +32,7 @@ export default function LiquorPrefs({
   }
 
   return (
-    <div className="btn card-shadow w-3/4 flex flex-col justify-center self-center mt-24 p-2 text-white border-solid border-4 border-white shadow-xl rounded-xl">
+    <div className="btn card-shadow max-w-sm w-3/4 flex flex-col justify-center self-center mt-24 p-2 text-white border-solid border-4 border-white shadow-xl rounded-xl">
       {/* <div className="btn card-shadow w-3/4 h-50 flex flex-col justify-center self-center mt-24 p-2 bg-white shadow-xl rounded-xl"> */}
       <h2 className="text-lg font-bold mb-4 text-center">
         Liquor Preferences?

@@ -60,19 +60,19 @@ export default function CitySearch({
   };
 
   return (
-    <div className="btn card-shadow w-3/4 flex flex-col justify-center self-center mt-24 p-2 text-white border-solid border-4 border-white shadow-xl rounded-xl">
+    <div className="btn card-shadow max-w-sm w-3/4 flex flex-col justify-center self-center mt-24 p-2 text-white border-solid border-4 border-white shadow-xl rounded-xl">
       {/* <div className="btn card-shadow w-3/4 flex flex-col justify-center self-center mt-24 p-2 bg-white shadow-xl rounded-xl"> */}
       <h1 className="mb-2 text-center text-xl font-semibold">
         Where are we mixing things up?
       </h1>
       <div className="text-center px-2">
-        <div className="flex justify-between border-2 py-2 px-2 mb-4 rounded-lg">
+        <div className="flex sm:justify-between border-2 py-2 px-2 mb-4 rounded-lg">
           <input
             type="text"
             placeholder="City, State"
             id="search-city"
             value={query}
-            className="bg-transparent focus:outline-none mr-2"
+            className="bg-transparent w-100 focus:outline-none mr-2"
             onChange={(e) => handleSearch(e.target.value)}
           />
           <button
