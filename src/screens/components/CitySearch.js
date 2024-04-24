@@ -72,23 +72,25 @@ export default function CitySearch({
             placeholder="City, State"
             id="search-city"
             value={query}
-            className="bg-transparent w-100 focus:outline-none mr-2"
+            className="bg-transparent  w-full focus:outline-none mr-2"
             onChange={(e) => handleSearch(e.target.value)}
           />
-          <button
-            className="flex items-center justify-center text-center"
-            onClick={() => {
-              setQuery("");
-              setCitySelected(false);
-              setErrorMessage(false);
-            }}
-          >
-            <FontAwesomeIcon
-              icon={faXmark}
-              size="2x"
-              className="text-roller-4"
-            />
-          </button>
+          <div className="">
+            <button
+              className="flex items-center justify-center text-center"
+              onClick={() => {
+                setQuery("");
+                setCitySelected(false);
+                setErrorMessage(false);
+              }}
+            >
+              <FontAwesomeIcon
+                icon={faXmark}
+                size="2x"
+                className="text-roller-4"
+              />
+            </button>
+          </div>
         </div>
         {searchResults && !citySelected && query.length > 0 && (
           <ul className="absolute flex flex-col bg-white text-black border-2 border-solid rounded-lg">
