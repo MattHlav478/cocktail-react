@@ -66,7 +66,7 @@ export default function CitySearch({
         Where are we mixing things up?
       </h1>
       <div className="text-center px-2">
-        <div className="flex sm:justify-between border-2 py-2 px-2 mb-4 rounded-lg">
+        <div className="flex justify-between border-2 py-2 px-2 mb-4 rounded-lg">
           <input
             type="text"
             placeholder="City, State"
